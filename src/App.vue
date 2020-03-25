@@ -75,8 +75,9 @@ export default {
 
 .header {
   width: 100%;
-  position: fixed;
   height: 100px;
+  background-color: #fff;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -94,14 +95,15 @@ export default {
       background: url("./assets/logo.png") 0 0 no-repeat;
     }
     .menu {
-      height: 90px;
       position: relative;
       display: flex;
       align-items: center;
       a {
+        height: 100px;
+        line-height: 100px;
         text-align: center;
         display: inline-block;
-        padding: 10px 20px;
+        padding: 0 20px;
         font-size: 18px;
         position: relative;
         color: #3f3f3f;
