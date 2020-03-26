@@ -1,21 +1,21 @@
 <template>
   <div id="app" :class="lang">
     <div class="header">
-      <div class="inner-wrap">
+      <div class="section">
         <a href="javascript:;" class="logo"></a>
         <div class="menu">
           <router-link to="/">{{ $t("nav[0]") }}</router-link>
           <router-link to="/">{{ $t("nav[1]") }}</router-link>
           <router-link to="/">{{ $t("nav[2]") }}</router-link>
           <router-link to="/about">{{ $t("nav[3]") }}</router-link>
-          <a :href="$t('WhitePager')" target="_blank">{{ $t("nav[4]") }}</a>
+          <a :href="$t('whitePager')" target="_blank">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
         </div>
       </div>
     </div>
     <router-view />
     <div class="footer">
-      <div class="inner-wrap">
+      <div class="section">
         <div class="footer-copyright">
           Copyright © 2019 Seele Foundation
         </div>
@@ -46,13 +46,13 @@ export default {
       this.menuShow = false;
     },
     changeLanguageVal() {
-      if (this.lang == "zh") {
+      if (this.lang === "zh") {
         this.lang = "en";
-        this.$i18n.locale = this.lang; //关键语句
+        this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
       } else {
         this.lang = "zh";
-        this.$i18n.locale = this.lang; //关键语句
+        this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
       }
       location.reload();
@@ -68,8 +68,8 @@ export default {
 @import "css/reset";
 @import "css/hover";
 
-.inner-wrap {
-  max-width: 1200px;
+.section {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -81,8 +81,9 @@ export default {
   top: 0;
   left: 0;
   z-index: 999;
-  .inner-wrap {
+  .section {
     height: 100px;
+    line-height: 100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -100,7 +101,7 @@ export default {
       align-items: center;
       a {
         height: 100px;
-        line-height: 100px;
+        line-height: 10 0px;
         text-align: center;
         display: inline-block;
         padding: 0 20px;
