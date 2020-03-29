@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="banner"></div>
+    <div class="banner-news">
+      <span>{{ $t("news.tit") }}</span>
+    </div>
     <div class="detail" v-if="newsCon">
       <div class="section">
         <div class="infos">
@@ -54,10 +56,17 @@ export default {
 };
 </script>
 
-<style scoped lang="less">
-.banner {
+<style lang="less" scoped>
+.banner-news {
   height: 581px;
   background: url("../assets/banner_news.jpg") center 0 no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-size: 60px;
+    color: #007586;
+  }
 }
 .detail {
   overflow: hidden;

@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="banner"></div>
+    <div class="banner-news">
+      <span>{{ $t("news.tit") }}</span>
+    </div>
     <div class="news-list" v-if="listArr.length > 0">
       <router-link
         tag="div"
@@ -67,6 +69,9 @@ export default {
         .then(res => {
           this.isLoading = false;
           this.listArr = [...this.listArr, ...res.data];
+          if (this.listArr.length == 0) {
+            this.isOver = true;
+          }
         })
         .catch(err => {
           if (err.isAxiosError) {
@@ -90,10 +95,17 @@ export default {
 };
 </script>
 
-<style lang="less">
-.banner {
+<style lang="less" scoped>
+.banner-news {
   height: 581px;
   background: url("../assets/banner_news.jpg") center 0 no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-size: 60px;
+    color: #007586;
+  }
 }
 .news-list {
   width: 1200px;
