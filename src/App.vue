@@ -10,6 +10,23 @@
           <router-link to="/cooperation">{{ $t("nav[3]") }}</router-link>
           <a :href="$t('whitePager')" target="_blank">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
+          <div class="menuLanguage">
+            {{ $t("language") }}
+            <ul>
+              <li
+                :class="lang == 'zh' ? 'active' : ''"
+                @click="changeLanguageVal"
+              >
+                中文
+              </li>
+              <li
+                :class="lang == 'en' ? 'active' : ''"
+                @click="changeLanguageVal"
+              >
+                English
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -56,9 +73,6 @@ export default {
         sessionStorage.setItem("LANG", this.lang);
       }
       location.reload();
-    },
-    addCookie(val) {
-      sessionStorage.setItem("LANG", val);
     }
   }
 };
@@ -135,6 +149,53 @@ export default {
         color: #007586;
         &:after {
           display: block;
+        }
+      }
+      .menuLanguage {
+        height: 100px;
+        line-height: 100px;
+        margin: 0 30px 0 10px;
+        padding-right: 30px;
+        text-align: center;
+        display: inline-block;
+        font-size: 18px;
+        background: url("./assets/icon_arrow.png") right center no-repeat;
+        position: relative;
+        ul {
+          background-color: #8b8b89;
+          border-radius: 10px;
+          position: absolute;
+          top: 100px;
+          right: 0;
+          overflow: hidden;
+          display: none;
+          li {
+            width: 120px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            a {
+              width: 100%;
+              font-size: 16px;
+              height: 38px;
+              line-height: 38px;
+              text-align: center;
+              display: inline-block;
+              border-radius: 0;
+              margin: 0;
+              padding: 0;
+              color: #fff;
+            }
+            &.active {
+              color: #fff;
+              background-color: #007586;
+            }
+          }
+        }
+        &:hover {
+          ul {
+            display: block;
+          }
         }
       }
     }

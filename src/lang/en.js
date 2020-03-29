@@ -1,6 +1,7 @@
 module.exports = {
   nav: ["首页", "团队", "技术生态", "产业合作", "白皮书", "新闻"],
   whitePager: "/pdf/zh/newpower.pdf",
+  language: "language",
   news: {
     tit: "新闻动态",
     more: "更多",
