@@ -4,10 +4,10 @@
       <div class="section">
         <a href="javascript:;" class="logo"></a>
         <div class="menu">
-          <router-link to="/">{{ $t("nav[0]") }}</router-link>
-          <router-link to="/">{{ $t("nav[1]") }}</router-link>
-          <router-link to="/">{{ $t("nav[2]") }}</router-link>
-          <router-link to="/about">{{ $t("nav[3]") }}</router-link>
+          <router-link to="/index">{{ $t("nav[0]") }}</router-link>
+          <router-link to="/team">{{ $t("nav[1]") }}</router-link>
+          <router-link to="/technology">{{ $t("nav[2]") }}</router-link>
+          <router-link to="/cooperation">{{ $t("nav[3]") }}</router-link>
           <a :href="$t('whitePager')" target="_blank">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
         </div>
@@ -129,6 +129,12 @@ export default {
           &:after {
             display: block;
           }
+        }
+      }
+      a.router-link-active {
+        color: #007586;
+        &:after {
+          display: block;
         }
       }
     }
