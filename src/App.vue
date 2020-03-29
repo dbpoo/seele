@@ -68,6 +68,10 @@ export default {
 @import "css/reset";
 @import "css/hover";
 
+#app {
+  padding-top: 100px;
+}
+
 .section {
   width: 1200px;
   margin: 0 auto;
@@ -176,6 +180,5 @@ export default {
 
 .container {
   min-height: 300px;
-  padding-top: 100px;
 }
 </style>

@@ -1,8 +1,12 @@
 <template>
   <div class="container">
-    <div class="banner"></div>
+    <div class="banner-container">
+      <div class="banner wow zoomInBg" data-wow-duration="3s">
+        <img :src="$t('img.banner')" alt="" srcset="" class="wow fadeInUp" />
+      </div>
+    </div>
     <div class="col-1">
-      <div class="section">
+      <div class="section wow fadeInUp">
         <div class="con">
           <img src="../assets/video.jpg" alt="" srcset="" />
           <div>
@@ -17,32 +21,49 @@
       </div>
     </div>
     <div class="col-2">
-      <div class="section">
+      <div class="section wow fadeInUp">
         <ul>
-          <li class="li1"><img src="../assets/icon_1.png" alt="" srcset="" /></li>
+          <li class="li1">
+            <img src="../assets/icon_1.png" alt="" srcset="" />
+          </li>
           <li class="li2">MPoW</li>
-          <li class="li3">提出了一种名为Matrix Proof of Work(MPoW)的一致性算法，该算法具有记忆性，并且被认为具有抗ASIC的特性。</li>
+          <li class="li3">
+            提出了一种名为Matrix Proof of
+            Work(MPoW)的一致性算法，该算法具有记忆性，并且被认为具有抗ASIC的特性。
+          </li>
         </ul>
-        <ul>
-          <li class="li1"><img src="../assets/icon_2.png" alt="" srcset="" /></li>
+        <ul class="">
+          <li class="li1">
+            <img src="../assets/icon_2.png" alt="" srcset="" />
+          </li>
           <li class="li2">密码学</li>
-          <li class="li3">SeeleTech提出多重椭圆曲线数字签名算法
-（MECDSA），通过椭圆曲线数量和六个参数的动态调整，实现了适用于不同应用场景和安全需求的动态签名机制。</li>
+          <li class="li3">
+            SeeleTech提出多重椭圆曲线数字签名算法
+            （MECDSA），通过椭圆曲线数量和六个参数的动态调整，实现了适用于不同应用场景和安全需求的动态签名机制。
+          </li>
         </ul>
         <ul>
-          <li class="li1"><img src="../assets/icon_3.png" alt="" srcset="" /></li>
+          <li class="li1">
+            <img src="../assets/icon_3.png" alt="" srcset="" />
+          </li>
           <li class="li2">网络传输</li>
-          <li class="li3">通过选择节点的近邻，使消息于短时间内在整个网络中传播。该方法以传输延迟来标识节点到邻居的距离，延迟越低则邻居越近。</li>
+          <li class="li3">
+            通过选择节点的近邻，使消息于短时间内在整个网络中传播。该方法以传输延迟来标识节点到邻居的距离，延迟越低则邻居越近。
+          </li>
         </ul>
         <ul>
-          <li class="li1"><img src="../assets/icon_4.png" alt="" srcset="" /></li>
+          <li class="li1">
+            <img src="../assets/icon_4.png" alt="" srcset="" />
+          </li>
           <li class="li2">EDA</li>
-          <li class="li3">提出了一种新的数据排序机制，称为ε-差分协议（EDA），可以支持并行数据排序。</li>
+          <li class="li3">
+            提出了一种新的数据排序机制，称为ε-差分协议（EDA），可以支持并行数据排序。
+          </li>
         </ul>
       </div>
     </div>
     <div class="col-3">
-      <div class="section">
+      <div class="section wow fadeInUp">
         <div class="tit"><img :src="$t('img.tit3')" alt="" srcset="" /></div>
         <div class="con">
           <img src="../assets/img_3.jpg" alt="" srcset="" />
@@ -56,33 +77,121 @@
           </div>
         </div>
       </div>
+      <div class="section wow fadeInUp">
+        <div class="tab">
+          <div
+            class="tab-item"
+            :class="index == tabIndex ? 'tab-item-cur' : ''"
+            v-for="(item, index) in tabArr"
+            :key="index"
+            @click="changeTab(index)"
+          >
+            {{ item }}
+          </div>
+        </div>
+        <div class="img-con">
+          <template v-if="tabIndex == 0">
+            <img :src="$t('img.fk[0]')" alt="" srcset="" />
+            <img :src="$t('img.fk[1]')" alt="" srcset="" />
+            <img :src="$t('img.fk[2]')" alt="" srcset="" />
+          </template>
+          <template v-if="tabIndex == 1">
+            <img :src="$t('img.fk[0]')" alt="" srcset="" />
+            <img :src="$t('img.fk[1]')" alt="" srcset="" />
+            <img :src="$t('img.fk[2]')" alt="" srcset="" />
+          </template>
+          <template v-if="tabIndex == 2">
+            <img :src="$t('img.fk[0]')" alt="" srcset="" />
+            <img :src="$t('img.fk[1]')" alt="" srcset="" />
+            <img :src="$t('img.fk[2]')" alt="" srcset="" />
+          </template>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
       <div class="section">
-        <div class="tab"></div>
+        <div class="history-line"></div>
+        <div class="history-point wow fadeInRight">
+          <ul>
+            <li>{{$t('history[0].t1')}}</li>
+            <li>{{$t('history[0].t2')}}</li>
+            <li><img src="../assets/point.png" alt="" srcset="" /></li>
+            <li v-html="$t('history[0].txt')"></li>
+          </ul>
+          <ul>
+            <li>{{$t('history[1].t1')}}</li>
+            <li>{{$t('history[1].t2')}}</li>
+            <li><img src="../assets/point.png" alt="" srcset="" /></li>
+            <li v-html="$t('history[1].txt')"></li>
+          </ul>
+          <ul>
+            <li>{{$t('history[2].t1')}}</li>
+            <li>{{$t('history[2].t2')}}</li>
+            <li><img src="../assets/point.png" alt="" srcset="" /></li>
+            <li v-html="$t('history[2].txt')"></li>
+          </ul>
+          <ul>
+            <li>{{$t('history[3].t1')}}</li>
+            <li>{{$t('history[3].t2')}}</li>
+            <li><img src="../assets/point.png" alt="" srcset="" /></li>
+            <li v-html="$t('history[3].txt')"></li>
+          </ul>
+          <ul>
+            <li>{{$t('history[4].t1')}}</li>
+            <li>{{$t('history[4].t2')}}</li>
+            <li><img src="../assets/point.png" alt="" srcset="" /></li>
+            <li v-html="$t('history[4].txt')"></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { WOW } from "wowjs";
+
 export default {
   data() {
     return {
       lang: sessionStorage.getItem("LANG"),
+      tabIndex: 0,
+      tabArr: ["专项疾病防控", "传染研究", "卫生防疫"]
     };
   },
-  mounted() {}
+  methods: {
+    changeTab(index) {
+      this.tabIndex = index;
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      new WOW().init({
+        live: false
+      });
+    });
+  }
 };
 </script>
 
 <style lang="less">
+@import "../css/animate.less";
+.banner-container {
+  margin: 0 auto;
+  overflow: hidden;
+}
 .banner {
   height: 810px;
   background: url("../assets/banner.jpg") center 0 no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .col-1 {
   height: 643px;
   padding-top: 130px;
+  overflow: hidden;
   .section {
     background-color: #fafafa;
     .con {
@@ -106,6 +215,7 @@ export default {
 
 .col-2 {
   background-color: #fafafa;
+  overflow: hidden;
   .section {
     display: flex;
     flex-wrap: wrap;
@@ -141,6 +251,7 @@ export default {
 
 .col-3 {
   height: 1540px;
+  overflow: hidden;
   .section {
     padding-top: 90px;
     .tit {
@@ -163,6 +274,65 @@ export default {
           }
         }
       }
+    }
+    .tab {
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 90px;
+      border-bottom: 7px solid #007586;
+      .tab-item {
+        width: 309px;
+        height: 85px;
+        line-height: 85px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #007586;
+        background: url("../assets/tab.png") 0 0 no-repeat;
+      }
+      .tab-item-cur {
+        color: #ffffff;
+        background: url("../assets/tab_cur.png") 0 0 no-repeat;
+      }
+    }
+    .img-con {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+    }
+  }
+}
+
+.col-4 {
+  overflow: hidden;
+  height: 418px;
+  background-color: #fafafa;
+  .section {
+    position: relative;
+  }
+  .history-line {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    height: 10px;
+    background-color: #007082;
+    border-radius: 10px;
+  }
+  .history-point {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    ul > li {
+      text-align: center;
+      color: #007586;
+      padding-bottom: 10px;
+      font-weight: bold;
     }
   }
 }
