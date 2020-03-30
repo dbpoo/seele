@@ -114,4 +114,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 640px) {}
 </style>

@@ -21,6 +21,10 @@ const i18n = new VueI18n({
   }
 });
 
+if (!localLang) {
+  sessionStorage.setItem("LANG", sysLang);
+}
+
 router.afterEach((to, from, next) => {
   window.scrollTo(0, 0);
 });

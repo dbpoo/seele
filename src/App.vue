@@ -73,6 +73,9 @@ export default {
         sessionStorage.setItem("LANG", this.lang);
       }
       location.reload();
+    },
+    addCookie(val) {
+      sessionStorage.setItem("LANG", val);
     }
   }
 };
@@ -95,6 +98,7 @@ export default {
   width: 100%;
   height: 100px;
   background-color: #fff;
+  border-bottom: 1px solid #ccc;
   position: fixed;
   top: 0;
   left: 0;

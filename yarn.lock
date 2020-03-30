@@ -6745,6 +6745,11 @@ qs@~6.5.2:
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=
 
+quark-tooltips@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/quark-tooltips/-/quark-tooltips-1.0.3.tgz#5ae8631814cd7fb819512a3af59ff3a382bc77ce"
+  integrity sha512-MkKOfXjAEbwa5e0mcieKSn7oO+mkLRicvW6IFc0dDN1BIkNbtYelomzct+WWRlXmRk7Q2OETXhuaw2BS6R0ijA==
+
 query-string@^5.0.1:
   version "5.1.1"
   resolved "https://registry.npm.taobao.org/query-string/download/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"

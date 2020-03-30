@@ -8,8 +8,15 @@
     <div class="col-1">
       <div class="section wow fadeInUp">
         <div class="con">
-          <img src="../assets/video.jpg" alt="" srcset="" />
-          <div>
+          <div class="videobox">
+            <video-player
+              class="video-player vjs-custom-skin vjs-big-play-centered"
+              ref="videoPlayer"
+              :playsinline="true"
+              :options="playerOptions"
+            ></video-player>
+          </div>
+          <div class="videotxt">
             <p>
               Seele-N的战略定位为“<b>数据交易、全球受益、我们结算</b>”。专门针对“数据、知识与算法类资产”进行全球化交易而使用的“产业数据资产价值交换平台”，主要应用于“<b>医疗</b>”与“<b>金融</b>”两大场景。
             </p>
@@ -113,32 +120,32 @@
         <div class="history-line"></div>
         <div class="history-point wow fadeInRight">
           <ul>
-            <li>{{$t('history[0].t1')}}</li>
-            <li>{{$t('history[0].t2')}}</li>
+            <li>{{ $t("history[0].t1") }}</li>
+            <li>{{ $t("history[0].t2") }}</li>
             <li><img src="../assets/point.png" alt="" srcset="" /></li>
             <li v-html="$t('history[0].txt')"></li>
           </ul>
           <ul>
-            <li>{{$t('history[1].t1')}}</li>
-            <li>{{$t('history[1].t2')}}</li>
+            <li>{{ $t("history[1].t1") }}</li>
+            <li>{{ $t("history[1].t2") }}</li>
             <li><img src="../assets/point.png" alt="" srcset="" /></li>
             <li v-html="$t('history[1].txt')"></li>
           </ul>
           <ul>
-            <li>{{$t('history[2].t1')}}</li>
-            <li>{{$t('history[2].t2')}}</li>
+            <li>{{ $t("history[2].t1") }}</li>
+            <li>{{ $t("history[2].t2") }}</li>
             <li><img src="../assets/point.png" alt="" srcset="" /></li>
             <li v-html="$t('history[2].txt')"></li>
           </ul>
           <ul>
-            <li>{{$t('history[3].t1')}}</li>
-            <li>{{$t('history[3].t2')}}</li>
+            <li>{{ $t("history[3].t1") }}</li>
+            <li>{{ $t("history[3].t2") }}</li>
             <li><img src="../assets/point.png" alt="" srcset="" /></li>
             <li v-html="$t('history[3].txt')"></li>
           </ul>
           <ul>
-            <li>{{$t('history[4].t1')}}</li>
-            <li>{{$t('history[4].t2')}}</li>
+            <li>{{ $t("history[4].t1") }}</li>
+            <li>{{ $t("history[4].t2") }}</li>
             <li><img src="../assets/point.png" alt="" srcset="" /></li>
             <li v-html="$t('history[4].txt')"></li>
           </ul>
@@ -150,19 +157,47 @@
 
 <script>
 import { WOW } from "wowjs";
+import "video.js/dist/video-js.css";
+import { videoPlayer } from "vue-video-player";
 
 export default {
   data() {
     return {
       lang: sessionStorage.getItem("LANG"),
       tabIndex: 0,
-      tabArr: ["专项疾病防控", "传染研究", "卫生防疫"]
+      tabArr: ["专项疾病防控", "传染研究", "卫生防疫"],
+      playerOptions: {
+        autoplay: false, // 如果true,浏览器准备好时开始回放。
+        muted: false, // 默认情况下将会消除任何音频。
+        loop: false, // 导致视频一结束就重新开始。
+        preload: "auto", // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
+        language: "zh-CN",
+        aspectRatio: "16:9", // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）
+        fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
+        sources: [
+          {
+            type: "video/mp4", // 这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+            src: "http://www.xinnengboan.com/wp-content/mp4/xinneng.mp4" // url地址
+          }
+        ],
+        poster: require("../assets/poster.jpg"), // 你的封面地址
+        notSupportedMessage: "此视频暂无法播放，请稍后再试", // 允许覆盖Video.js无法播放媒体源时显示的默认信息。
+        controlBar: {
+          timeDivider: true,
+          durationDisplay: true,
+          remainingTimeDisplay: false,
+          fullscreenToggle: true // 全屏按钮
+        }
+      }
     };
   },
   methods: {
     changeTab(index) {
       this.tabIndex = index;
     }
+  },
+  components: {
+    videoPlayer
   },
   mounted() {
     this.$nextTick(() => {
@@ -193,10 +228,22 @@ export default {
   padding-top: 130px;
   overflow: hidden;
   .section {
-    background-color: #fafafa;
     .con {
       display: flex;
-      div {
+      background-color: #fafafa;
+      .videobox {
+        width: 653px;
+        height: 368px;
+        background-color: rgba(0, 0, 0, 0.5);
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .video-player {
+          width: 653px;
+        }
+      }
+      .videotxt {
         font-size: 20px;
         padding: 30px;
         p {
@@ -335,5 +382,8 @@ export default {
       font-weight: bold;
     }
   }
+}
+
+@media screen and (max-width: 640px) {
 }
 </style>
