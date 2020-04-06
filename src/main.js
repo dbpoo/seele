@@ -2,7 +2,6 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-// import storage from "good-storage";
 import VueI18n from "vue-i18n";
 import axios from "axios";
 

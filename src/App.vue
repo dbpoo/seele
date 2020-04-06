@@ -3,8 +3,9 @@
     <div class="header">
       <div class="section">
         <a href="javascript:;" class="logo"></a>
-        <div class="menu">
-          <router-link to="/index">{{ $t("nav[0]") }}</router-link>
+
+        <div class="menu-pc">
+          <router-link to="/">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <router-link to="/technology">{{ $t("nav[2]") }}</router-link>
           <router-link to="/cooperation">{{ $t("nav[3]") }}</router-link>
@@ -27,6 +28,27 @@
               </li>
             </ul>
           </div>
+        </div>
+
+        <div
+          class="menu-toggle"
+          :class="showMenu ? 'close' : ''"
+          @click="showMenu = !showMenu"
+        ></div>
+        <div class="menu-mobile" v-show="showMenu">
+          <router-link to="/">{{ $t("nav[0]") }}</router-link>
+          <router-link to="/team">{{ $t("nav[1]") }}</router-link>
+          <router-link to="/technology">{{ $t("nav[2]") }}</router-link>
+          <router-link to="/cooperation">{{ $t("nav[3]") }}</router-link>
+          <a :href="$t('whitePager')" target="_blank">{{ $t("nav[4]") }}</a>
+          <router-link to="/news">{{ $t("nav[5]") }}</router-link>
+          <div class="tit">{{ $t("language") }}</div>
+          <a :class="lang == 'zh' ? 'active' : ''" @click="changeLanguageVal">
+            中文
+          </a>
+          <a :class="lang == 'en' ? 'active' : ''" @click="changeLanguageVal">
+            English
+          </a>
         </div>
       </div>
     </div>
@@ -54,14 +76,11 @@ export default {
   name: "App",
   data() {
     return {
-      menuShow: false,
+      showMenu: false,
       lang: sessionStorage.getItem("LANG")
     };
   },
   methods: {
-    changeLanguage(key, index) {
-      this.menuShow = false;
-    },
     changeLanguageVal() {
       if (this.lang === "zh") {
         this.lang = "en";
@@ -77,7 +96,13 @@ export default {
     addCookie(val) {
       sessionStorage.setItem("LANG", val);
     }
-  }
+  },
+  watch: {
+    $route() {
+      this.showMenu = false;
+    }
+  },
+  mounted() {}
 };
 </script>
 
@@ -85,7 +110,7 @@ export default {
 @import "css/reset";
 @import "css/hover";
 
-#app {
+body {
   padding-top: 100px;
 }
 
@@ -96,7 +121,6 @@ export default {
 
 .header {
   width: 100%;
-  height: 100px;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   position: fixed;
@@ -105,7 +129,6 @@ export default {
   z-index: 999;
   .section {
     height: 100px;
-    line-height: 100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -117,93 +140,103 @@ export default {
       display: block;
       background: url("./assets/logo.png") 0 0 no-repeat;
     }
-    .menu {
-      position: relative;
-      display: flex;
-      align-items: center;
-      a {
-        height: 100px;
-        line-height: 10 0px;
-        text-align: center;
-        display: inline-block;
-        padding: 0 20px;
-        font-size: 18px;
-        position: relative;
-        color: #3f3f3f;
-        &:after {
-          display: none;
-          content: " ";
-          position: absolute;
-          width: 36px;
-          height: 6px;
-          overflow: hidden;
-          background-color: #007586;
-          bottom: 0;
-          left: 50%;
-          margin-left: -18px;
-        }
-        &:hover {
-          color: #007586;
-          &:after {
-            display: block;
-          }
-        }
-      }
-      a.router-link-active {
-        color: #007586;
-        &:after {
-          display: block;
-        }
-      }
-      .menuLanguage {
-        height: 100px;
-        line-height: 100px;
-        margin: 0 30px 0 10px;
-        padding-right: 30px;
-        text-align: center;
-        display: inline-block;
-        font-size: 18px;
-        background: url("./assets/icon_arrow.png") right center no-repeat;
-        position: relative;
-        ul {
-          background-color: #8b8b89;
-          border-radius: 10px;
-          position: absolute;
-          top: 100px;
-          right: 0;
-          overflow: hidden;
-          display: none;
-          li {
-            width: 120px;
-            height: 38px;
-            line-height: 38px;
-            text-align: center;
-            a {
-              width: 100%;
-              font-size: 16px;
-              height: 38px;
-              line-height: 38px;
-              text-align: center;
-              display: inline-block;
-              border-radius: 0;
-              margin: 0;
-              padding: 0;
-              color: #fff;
-            }
-            &.active {
-              color: #fff;
-              background-color: #007586;
-            }
-          }
-        }
-        &:hover {
-          ul {
-            display: block;
-          }
-        }
+  }
+}
+
+.menu-pc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  a {
+    height: 100px;
+    line-height: 100px;
+    line-height: 10 0px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 18px;
+    position: relative;
+    color: #3f3f3f;
+    &:after {
+      display: none;
+      content: " ";
+      position: absolute;
+      width: 36px;
+      height: 6px;
+      overflow: hidden;
+      background-color: #007586;
+      bottom: 0;
+      left: 50%;
+      margin-left: -18px;
+    }
+    &:hover {
+      color: #007586;
+      &:after {
+        display: block;
       }
     }
   }
+  a.router-link-active {
+    color: #007586;
+    &:after {
+      display: block;
+    }
+  }
+  .menuLanguage {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 30px 0 10px;
+    padding-right: 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    background: url("./assets/icon_arrow.png") right center no-repeat;
+    position: relative;
+    ul {
+      background-color: #8b8b89;
+      border-radius: 10px;
+      position: absolute;
+      top: 100px;
+      right: 0;
+      overflow: hidden;
+      display: none;
+      li {
+        width: 120px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        a {
+          width: 100%;
+          font-size: 16px;
+          height: 38px;
+          line-height: 38px;
+          text-align: center;
+          display: inline-block;
+          border-radius: 0;
+          margin: 0;
+          padding: 0;
+          color: #fff;
+        }
+        &.active {
+          color: #fff;
+          background-color: #007586;
+        }
+      }
+    }
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 .footer {
@@ -251,5 +284,61 @@ export default {
 
 .container {
   min-height: 300px;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    padding-top: 80px;
+  }
+  .section {
+    width: 100%;
+  }
+  .menu-pc {
+    display: none;
+  }
+  .menu-mobile {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    > a {
+      height: 40px;
+      line-height: 40px;
+      padding-left: 20px;
+      display: flex;
+      border-bottom: 1px solid #3e3e3e;
+    }
+    .tit {
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      background-color: #007586;
+      padding-left: 20px;
+      font-size: 14px;
+    }
+  }
+  .menu-toggle {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(./assets/menu_switch.png) center center no-repeat;
+    background-size: 32px 28px;
+    &.close {
+      background: url(./assets/menu_close.png) center center no-repeat;
+    }
+  }
+  .header {
+    .section {
+      height: 80px;
+      .logo {
+        width: 120px;
+        height: 28px;
+        background-size: contain;
+      }
+    }
+  }
 }
 </style>
