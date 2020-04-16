@@ -18,10 +18,10 @@
           </div>
           <div class="videotxt">
             <p>
-              Seele-N的战略定位为“<b>数据交易、全球受益、我们结算</b>”。专门针对“数据、知识与算法类资产”进行全球化交易而使用的“产业数据资产价值交换平台”，主要应用于“<b>医疗</b>”与“<b>金融</b>”两大场景。
+              Seele-N项目团队通过深入研究，以知识互联解决知识的结构、继承、传递等体系问题，以价值互联解决知识发布、传播、使用过程中的权益冲突。知识互联+价值互联，融合建立“产业数据基础资源交换平台”，构建完整的知识链条，催生大量新型应用、新型互动模式的涌现。
             </p>
             <p>
-              Seele-N是为数据资产交易平台服务的金融基础设施，实现数据资产的可信交易和记账服务，<b>可与各类知识计算化操作系统和数据资产交易系统无缝连接</b>。
+              我们的核心目标是，从基础设施层面解决数据基础资源的共享、共建、共赢，打通资源资产的交换、价值变现的通路。项目开发为全球知识资产流通服务的价值交换平台和建设为数据资产交易平台服务的金融基础设施，以可执行知识产权为核心建立知识权益的开放体系，架设新型资产全球化过程中责、权、利的统一生态。
             </p>
           </div>
         </div>
@@ -33,38 +33,36 @@
           <li class="li1">
             <img src="../assets/icon_1.png" alt="" srcset="" />
           </li>
-          <li class="li2">MPoW</li>
+          <li class="li2">EIP事务</li>
           <li class="li3">
-            提出了一种名为Matrix Proof of
-            Work(MPoW)的一致性算法，该算法具有记忆性，并且被认为具有抗ASIC的特性。
+            EIP（Executive Intellectual Property）通过描叙成计算机语言，建立可以在实际生产环境中运行的知识模型，使知识实现计算化，为知识的可流动可直接应用于社会生产创造了条件。
           </li>
         </ul>
         <ul class="">
           <li class="li1">
             <img src="../assets/icon_2.png" alt="" srcset="" />
           </li>
-          <li class="li2">密码学</li>
+          <li class="li2">数据治理</li>
           <li class="li3">
-            SeeleTech提出多重椭圆曲线数字签名算法
-            （MECDSA），通过椭圆曲线数量和六个参数的动态调整，实现了适用于不同应用场景和安全需求的动态签名机制。
+            根据不同应用场景构建了异构安全模型，每一个数字基础资源拥有者可以自主选择协议以不同信任级别来分享数据，同时安全可靠地跟踪追溯资源使用情况。
           </li>
         </ul>
         <ul>
           <li class="li1">
             <img src="../assets/icon_3.png" alt="" srcset="" />
           </li>
-          <li class="li2">网络传输</li>
+          <li class="li2">隐私安全</li>
           <li class="li3">
-            通过选择节点的近邻，使消息于短时间内在整个网络中传播。该方法以传输延迟来标识节点到邻居的距离，延迟越低则邻居越近。
+            平台围绕核心数据保护，构建分级分类细粒化隐私保护机制，采用差分隐私保护、属性加密、安全多方计算等密码学技术，为数据确权和可信数字基础资源共享提供理论支撑和实践手段。
           </li>
         </ul>
         <ul>
           <li class="li1">
             <img src="../assets/icon_4.png" alt="" srcset="" />
           </li>
-          <li class="li2">EDA</li>
+          <li class="li2">权益支付</li>
           <li class="li3">
-            提出了一种新的数据排序机制，称为ε-差分协议（EDA），可以支持并行数据排序。
+            分布式的针对金融及医疗行业的数字资产交易平台，满足行业应用的数据高可靠性、易用性和安全性要求。行业数字资产共享生态基于区块链技术，发挥其在数据隐私保护、数据存储等方面的优势。
           </li>
         </ul>
       </div>
@@ -148,6 +146,12 @@
             <li>{{ $t("history[4].t2") }}</li>
             <li><img src="../assets/point.png" alt="" srcset="" /></li>
             <li v-html="$t('history[4].txt')"></li>
+          </ul>
+          <ul>
+            <li>{{ $t("history[5].t1") }}</li>
+            <li>{{ $t("history[5].t2") }}</li>
+            <li><img src="../assets/point.png" alt="" srcset="" /></li>
+            <li v-html="$t('history[5].txt')"></li>
           </ul>
         </div>
       </div>
@@ -244,12 +248,11 @@ export default {
         }
       }
       .videotxt {
-        font-size: 20px;
-        padding: 30px;
+        font-size: 18px;
+        padding: 10px 30px;
         p {
           text-indent: 2rem;
-          line-height: 40px;
-          padding-bottom: 20px;
+          padding-top: 20px;
           b {
             color: #007586;
             font-weight: bold;
@@ -298,9 +301,9 @@ export default {
 
 .col-3 {
   height: 1540px;
+  padding-top: 90px;
   overflow: hidden;
   .section {
-    padding-top: 90px;
     .tit {
       width: 421px;
       height: 149px;
@@ -385,5 +388,65 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
+  .banner {
+    height: 260px;
+    background-size: cover;
+    img {
+      width: 100%;
+    }
+  }
+  .col-1 {
+    height: auto;
+    padding: 0;
+    .section {
+      .con {
+        flex-wrap: wrap;
+        .videobox {
+          width: 100%;
+          height: auto;
+          background-color: #fff;
+        }
+        .videotxt {
+          padding: 20px;
+        }
+      }
+    }
+  }
+  .col-2 {
+    height: auto;
+    padding: 0;
+    .section {
+      ul{
+        width: 100%;
+        height: auto;
+        li.li3 {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  .col-3 {
+    height: auto;
+    padding: 0;
+    .section {
+      .tit {
+        width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        img {
+          width: 100%;
+        }
+      }
+      .con {
+        flex-wrap: wrap;
+        img {
+          width: 100%;
+        }
+        div {
+          padding: 20px;
+        }
+      }
+    }
+  }
 }
 </style>
