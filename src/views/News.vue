@@ -52,7 +52,7 @@ export default {
       isLoading: false,
       isOver: false,
       page: 1,
-      categories: sessionStorage.getItem("LANG") == "zh" ? 4 : 5,
+      categories: sessionStorage.getItem("LANG") == "zh" ? 12 : 13,
       listArr: []
     };
   },

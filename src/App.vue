@@ -6,12 +6,12 @@
 
         <div class="menu-pc">
           <router-link to="/">{{ $t("nav[0]") }}</router-link>
-          <router-link to="/team">{{ $t("nav[1]") }}</router-link>
-          <router-link to="/technology">{{ $t("nav[2]") }}</router-link>
-          <router-link to="/cooperation">{{ $t("nav[3]") }}</router-link>
-          <a :href="$t('whitePager')" target="_blank">{{ $t("nav[4]") }}</a>
+          <a href="javascript:;">{{ $t("nav[1]") }}</a>
+          <a href="javascript:;">{{ $t("nav[2]") }}</a>
+          <a href="javascript:;">{{ $t("nav[3]") }}</a>
+          <a href="javascript:;">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <div class="menuLanguage">
+          <!-- <div class="menuLanguage">
             {{ $t("language") }}
             <ul>
               <li
@@ -27,7 +27,7 @@
                 English
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
 
         <div
@@ -176,7 +176,7 @@ body {
       }
     }
   }
-  a.router-link-active {
+  a.router-link-exact-active {
     color: #007586;
     &:after {
       display: block;

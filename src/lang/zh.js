@@ -147,9 +147,9 @@ module.exports = {
     ]
   },
   img: {
-    banner: "/static/zh/banner_txt.png",
-    tit3: "/static/zh/tit_3.jpg",
-    fk: ["/static/zh/fk_1.jpg", "/static/zh/fk_2.jpg", "/static/zh/fk_3.jpg"]
+    banner: "static/zh/banner_txt.png",
+    tit3: "static/zh/tit_3.jpg",
+    fk: ["static/zh/fk_1.jpg", "static/zh/fk_2.jpg", "static/zh/fk_3.jpg"]
   },
   history: [
     {
