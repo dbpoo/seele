@@ -4,22 +4,64 @@
       <span>{{ $t("team.tit") }}</span>
     </div>
 
-    <div class="team bg-gray" v-for="(item, index) in list" :key="index">
+    <div
+      class="team bg-gray"
+      v-for="(item, index) in list"
+      :key="index"
+      @click="close"
+    >
       <div class="section">
         <div class="team-t">
           <div class="tit">
             {{ item.tit }} <span>{{ team }}</span>
           </div>
         </div>
-        <div class="team-c">
-          <div class="box" v-for="(sitem, sindex) in item.arr" :key="sindex">
+        <div class="team-c" v-if="isMobile">
+          <div
+            class="box"
+            :class="sindex == idx ? 'box-cur' : ''"
+            v-for="(sitem, sindex) in item.arr"
+            :key="sindex"
+            @click.stop="tipsHandler(sindex)"
+          >
             <ul>
               <li class="li1"><img :src="sitem.img" alt="" srcset="" /></li>
-              <li class="li2">{{ sitem.name }}</li>
+              <li class="li2">
+                <span>{{ sitem.name }}</span>
+              </li>
               <li class="li3"><span></span></li>
               <li class="li4">{{ sitem.position }}</li>
             </ul>
-            <div class="tips" v-html="sitem.tips"></div>
+            <div
+              class="tips"
+              :class="'tips-' + sindex"
+              v-html="sitem.tips"
+            ></div>
+            <div class="tips-arrow"></div>
+          </div>
+        </div>
+        <div class="team-c" v-else>
+          <div
+            class="box"
+            :class="sindex == idx ? 'box-cur' : ''"
+            v-for="(sitem, sindex) in item.arr"
+            :key="sindex"
+            @mouseover="idx = sindex"
+            @mouseout="idx = -1"
+          >
+            <ul>
+              <li class="li1"><img :src="sitem.img" alt="" srcset="" /></li>
+              <li class="li2">
+                <span>{{ sitem.name }}</span>
+              </li>
+              <li class="li3"><span></span></li>
+              <li class="li4">{{ sitem.position }}</li>
+            </ul>
+            <div
+              class="tips"
+              :class="'tips-' + sindex"
+              v-html="sitem.tips"
+            ></div>
             <div class="tips-arrow"></div>
           </div>
         </div>
@@ -29,15 +71,38 @@
 </template>
 
 <script>
+import { isMobile } from "../js/utils";
+
 export default {
   data() {
     return {
       lang: sessionStorage.getItem("LANG"),
       team: sessionStorage.getItem("LANG") === "zh" ? "团队" : "team",
-      list: this.$t("team.plist")
+      list: this.$t("team.plist"),
+      idx: -1,
+      isMobile: false
     };
   },
-  mounted() {}
+  methods: {
+    tipsHandler(index) {
+      if (index == this.idx) {
+        this.idx = -1;
+      } else {
+        this.idx = index;
+      }
+    },
+    close(e) {
+      let btn = document.querySelector(".tips");
+      if (btn) {
+        if (!btn.contains(event.target)) {
+          this.idx = -1;
+        }
+      }
+    }
+  },
+  mounted() {
+    this.isMobile = isMobile();
+  }
 };
 </script>
 
@@ -123,22 +188,22 @@ export default {
       display: none;
       z-index: 99;
     }
-    &:hover {
-      ul {
-        li.li2,
-        li.li4 {
-          color: #007385;
-        }
-        li.li3 {
-          span {
-            background-color: #007385;
-          }
+  }
+  .box-cur {
+    ul {
+      li.li2,
+      li.li4 {
+        color: #007385;
+      }
+      li.li3 {
+        span {
+          background-color: #007385;
         }
       }
-      .tips,
-      .tips-arrow {
-        display: block;
-      }
+    }
+    .tips,
+    .tips-arrow {
+      display: block;
     }
   }
 }
@@ -161,9 +226,11 @@ export default {
   }
   .team-c {
     padding: 20px 15px;
+    position: relative;
     .box {
       width: 33%;
       padding: 10px;
+      position: static;
       ul {
         li.li1 {
           img {
@@ -172,16 +239,36 @@ export default {
         }
         li.li2 {
           font-size: 14px;
+          height: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         li.li4 {
           font-size: 12px;
         }
       }
-      &:hover {
-        .tips,
-        .tips-arrow {
-          display: none;
-        }
+
+      .tips-0,
+      .tips-1,
+      .tips-2 {
+        width: 100%;
+        position: absolute;
+        top: 190px;
+        left: 0;
+      }
+      .tips-3,
+      .tips-4,
+      .tips-5 {
+        width: 100%;
+        position: absolute;
+        top: 412px;
+        left: 0;
+      }
+    }
+    .box-cur {
+      .tips-arrow {
+        display: none;
       }
     }
   }

@@ -17,7 +17,7 @@ module.exports = {
   },
   video: {
     txt: [
-      'Through in-depth research, Seele-N project team solves the system problems of knowledge structure, inheritance and transmission with knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data Infrastructure Exchange Platform ", constructed a complete knowledge chain, has spawned a large number of new applications, new interactive models.',
+      'Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data Infrastructure Exchange Platform ", constructed a complete knowledge chain, has spawned a large number of new applications, new interactive models.',
       "Our core goal is to solve the sharing, co-construction, and win-win of data infrastructure resources from the infrastructure level, and open up the channels for resource property exchange and value realization. The project develops a value exchange platform for global knowledge property circulation service and builds a financial infrastructure for data property trading platform. An open system of knowledge rights and interests is established with EIP (Executive IP) as the core, and a unified ecology of responsibility, power and profit in the process of globalization of new property is established."
     ]
   },

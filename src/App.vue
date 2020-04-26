@@ -56,7 +56,7 @@
     <div class="footer">
       <div class="section">
         <div class="footer-copyright">
-          Copyright © 2019 Seele Foundation
+          Copyright © 2020 Seele Foundation
         </div>
         <div class="footer-link">
           <a

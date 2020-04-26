@@ -414,6 +414,7 @@ export default {
         }
         .videotxt {
           padding: 20px;
+          line-height: 30px;
         }
       }
     }
