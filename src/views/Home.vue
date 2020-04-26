@@ -9,12 +9,13 @@
       <div class="section wow fadeInUp">
         <div class="con">
           <div class="videobox">
-            <video-player
+            <img src="../assets/video.jpg" alt="" srcset="" />
+            <!-- <video-player
               class="video-player vjs-custom-skin vjs-big-play-centered"
               ref="videoPlayer"
               :playsinline="true"
               :options="playerOptions"
-            ></video-player>
+            ></video-player> -->
           </div>
           <div class="videotxt">
             <p>
@@ -236,15 +237,15 @@ export default {
       display: flex;
       background-color: #fafafa;
       .videobox {
-        width: 653px;
-        height: 368px;
+        width: 563px;
+        height: 383px;
         background-color: rgba(0, 0, 0, 0.5);
         flex: 0 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
         .video-player {
-          width: 653px;
+          width: 563px;
         }
       }
       .videotxt {

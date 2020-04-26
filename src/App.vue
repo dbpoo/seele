@@ -59,12 +59,12 @@
           Copyright © 2019 Seele Foundation
         </div>
         <div class="footer-link">
-          <a href="javascript:;" class="fl-01"></a>
-          <a href="javascript:;" class="fl-02"></a>
-          <a href="javascript:;" class="fl-03"></a>
-          <a href="javascript:;" class="fl-04"></a>
-          <a href="javascript:;" class="fl-05"></a>
-          <a href="javascript:;" class="fl-06"></a>
+          <a href="https://medium.com/@rong.guanhua" class="fl-01" target="_blank"></a>
+          <!-- <a href="javascript:;" class="fl-02" target="_blank"></a> -->
+          <a href="https://t.me/Seelen2020" class="fl-03" target="_blank"></a>
+          <a href="https://twitter.com/n_seele" class="fl-04" target="_blank"></a>
+          <!-- <a href="javascript:;" class="fl-05" target="_blank"></a> -->
+          <a href="https://weibo.com/6561132287/profile?topnav=1&wvr=6" class="fl-06" target="_blank"></a>
         </div>
       </div>
     </div>
