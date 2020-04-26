@@ -40,7 +40,7 @@ module.exports = {
     tit: "团队",
     plist: [
       {
-        tit: "核心团队",
+        tit: "核心",
         arr: [
           {
             img: "/static/team/jeff.png",

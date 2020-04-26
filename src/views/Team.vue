@@ -3,7 +3,7 @@
     <div class="banner-team">
       <span>{{ $t("team.tit") }}</span>
     </div>
-    
+
     <div class="team bg-gray" v-for="(item, index) in list" :key="index">
       <div class="section">
         <div class="team-t">
@@ -25,7 +25,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -176,6 +175,12 @@ export default {
         }
         li.li4 {
           font-size: 12px;
+        }
+      }
+      &:hover {
+        .tips,
+        .tips-arrow {
+          display: none;
         }
       }
     }
