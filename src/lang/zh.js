@@ -58,7 +58,7 @@ module.exports = {
           },
           {
             img: "/static/team/peng.png",
-            name: "王鹏 先生",
+            name: "Peng Wang 先生",
             position: "首席市场官CMO",
             tips:
               "负责项目的生态建设和合作拓展。<br>资深投资人，国内首批IDL可视化计算机语言专家、大数据专家。<br>2017年起担任加密数字货币基金合伙人，专注于区块链早期项目投资。<br>曾任BCH生态基金负责人。"
@@ -81,8 +81,7 @@ module.exports = {
             img: "/static/team/Amos.png",
             name: "Amos 先生",
             position: "特别产业顾问",
-            tips:
-              "向Seele运营团队提供产业顾问支持。"
+            tips: "向Seele运营团队提供产业顾问支持。"
           }
         ]
       }
@@ -91,6 +90,7 @@ module.exports = {
   img: {
     banner: "static/zh/banner_txt.png",
     tit3: "static/zh/tit_3.jpg",
+    video: "static/zh/video.jpg",
     fk: ["static/zh/fk_1.jpg", "static/zh/fk_2.jpg", "static/zh/fk_3.jpg"]
   },
   history: [

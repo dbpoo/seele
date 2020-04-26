@@ -9,7 +9,7 @@
       <div class="section wow fadeInUp">
         <div class="con">
           <div class="videobox">
-            <img src="../assets/video.jpg" alt="" srcset="" />
+             <img :src="$t('img.video')" alt="" srcset="" />
             <!-- <video-player
               class="video-player vjs-custom-skin vjs-big-play-centered"
               ref="videoPlayer"
@@ -231,6 +231,7 @@ export default {
   .section {
     .con {
       background-color: #fafafa;
+      overflow: hidden;
       .videobox {
         width: 563px;
         height: 383px;
@@ -245,7 +246,6 @@ export default {
         }
       }
       .videotxt {
-        font-size: 18px;
         padding: 10px 30px;
         p {
           text-indent: 2rem;

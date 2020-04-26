@@ -65,10 +65,10 @@ module.exports = {
           },
           {
             img: "/static/team/peng.png",
-            name: "Mr. Wang Peng",
+            name: "Mr. Peng Wang",
             position: "CMO",
             tips:
-              "Mr. Wang Peng is responsible for the project's ecological construction and cooperative development.<br>a senior investor, the first batch of IDL visualization computer language experts and big data experts in China. <br>He has been a partner of the encrypted digital currency fund since 2017, focusing on early investment in blockchain projects. <br>Former head of BCH Ecological Foundation."
+              "Mr. Peng Wang is responsible for the project's ecological construction and cooperative development.<br>a senior investor, the first batch of IDL visualization computer language experts and big data experts in China. <br>He has been a partner of the encrypted digital currency fund since 2017, focusing on early investment in blockchain projects. <br>Former head of BCH Ecological Foundation."
           },
           {
             img: "/static/team/Evan.png",
@@ -98,7 +98,8 @@ module.exports = {
   img: {
     banner: "static/en/banner_txt.png",
     tit3: "static/en/tit_3.jpg",
-    fk: ["static/zh/fk_1.jpg", "static/zh/fk_2.jpg", "static/zh/fk_3.jpg"]
+    video: "static/en/video.jpg",
+    fk: ["static/en/fk_1.jpg", "static/en/fk_2.jpg", "static/en/fk_3.jpg"]
   },
   history: [
     {
