@@ -68,7 +68,7 @@
         </ul>
       </div>
     </div>
-    <div class="col-3">
+    <!-- <div class="col-3">
       <div class="section wow fadeInUp">
         <div class="tit"><img :src="$t('img.tit3')" alt="" srcset="" /></div>
         <div class="con">
@@ -113,8 +113,8 @@
           </template>
         </div>
       </div>
-    </div>
-    <div class="col-4">
+    </div> -->
+    <!-- <div class="col-4">
       <div class="section">
         <div class="history-line"></div>
         <div class="history-point wow fadeInRight">
@@ -156,7 +156,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -267,6 +267,7 @@ export default {
 .col-2 {
   background-color: #fafafa;
   overflow: hidden;
+  margin-bottom: 30px;
   .section {
     display: flex;
     flex-wrap: wrap;
