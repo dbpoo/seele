@@ -60,6 +60,7 @@ export default {
 .banner-news {
   height: 581px;
   background: url("../assets/banner_news.jpg") center 0 no-repeat;
+  background-size: 100% 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,8 +98,9 @@ export default {
       color: #6c6c6c;
       text-indent: 2em;
       font-size: 24px;
-      line-height: 50px;
+      line-height: 150%;
       text-align: justify;
+      padding-bottom: 10px;
     }
   }
   .source {
@@ -115,5 +117,31 @@ export default {
   justify-content: center;
 }
 
-@media screen and (max-width: 640px) {}
+@media screen and (max-width: 640px) {
+   .banner-news {
+    height: 150px;
+    span {
+      font-size: 40px;
+    }
+  }
+  .detail {
+    padding: 0;
+    .infos {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .title {
+      margin: 20px;
+      font-size: 24px;
+    }
+    .content {
+      margin-bottom: 50px;
+      /deep/ p {
+        font-size: 20px;
+        line-height: 150%;
+      }
+    }
+    
+  }
+}
 </style>

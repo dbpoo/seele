@@ -18,12 +18,7 @@
             ></video-player> -->
           </div>
           <div class="videotxt">
-            <p>
-              Seele-N项目团队通过深入研究，以知识互联解决知识的结构、继承、传递等体系问题，以价值互联解决知识发布、传播、使用过程中的权益冲突。知识互联+价值互联，融合建立“产业数据基础资源交换平台”，构建完整的知识链条，催生大量新型应用、新型互动模式的涌现。
-            </p>
-            <p>
-              我们的核心目标是，从基础设施层面解决数据基础资源的共享、共建、共赢，打通资源资产的交换、价值变现的通路。项目开发为全球知识资产流通服务的价值交换平台和建设为数据资产交易平台服务的金融基础设施，以可执行知识产权为核心建立知识权益的开放体系，架设新型资产全球化过程中责、权、利的统一生态。
-            </p>
+            <p v-for="(item, index) in videoTxt" :key="index">{{ item }}</p>
           </div>
         </div>
       </div>
@@ -34,36 +29,36 @@
           <li class="li1">
             <img src="../assets/icon_1.png" alt="" srcset="" />
           </li>
-          <li class="li2">EIP事务</li>
+          <li class="li2">{{ $t("intro[0].tit") }}</li>
           <li class="li3">
-            EIP（Executive Intellectual Property）通过描叙成计算机语言，建立可以在实际生产环境中运行的知识模型，使知识实现计算化，为知识的可流动可直接应用于社会生产创造了条件。
+            {{ $t("intro[0].con") }}
           </li>
         </ul>
-        <ul class="">
+        <ul>
           <li class="li1">
             <img src="../assets/icon_2.png" alt="" srcset="" />
           </li>
-          <li class="li2">数据治理</li>
+          <li class="li2">{{ $t("intro[1].tit") }}</li>
           <li class="li3">
-            根据不同应用场景构建了异构安全模型，每一个数字基础资源拥有者可以自主选择协议以不同信任级别来分享数据，同时安全可靠地跟踪追溯资源使用情况。
+            {{ $t("intro[1].con") }}
           </li>
         </ul>
         <ul>
           <li class="li1">
             <img src="../assets/icon_3.png" alt="" srcset="" />
           </li>
-          <li class="li2">隐私安全</li>
+          <li class="li2">{{ $t("intro[2].tit") }}</li>
           <li class="li3">
-            平台围绕核心数据保护，构建分级分类细粒化隐私保护机制，采用差分隐私保护、属性加密、安全多方计算等密码学技术，为数据确权和可信数字基础资源共享提供理论支撑和实践手段。
+            {{ $t("intro[2].con") }}
           </li>
         </ul>
         <ul>
           <li class="li1">
             <img src="../assets/icon_4.png" alt="" srcset="" />
           </li>
-          <li class="li2">权益支付</li>
+          <li class="li2">{{ $t("intro[3].tit") }}</li>
           <li class="li3">
-            分布式的针对金融及医疗行业的数字资产交易平台，满足行业应用的数据高可靠性、易用性和安全性要求。行业数字资产共享生态基于区块链技术，发挥其在数据隐私保护、数据存储等方面的优势。
+            {{ $t("intro[3].con") }}
           </li>
         </ul>
       </div>
@@ -163,7 +158,7 @@
 <script>
 import { WOW } from "wowjs";
 import "video.js/dist/video-js.css";
-import { videoPlayer } from "vue-video-player";
+// import { videoPlayer } from "vue-video-player";
 
 export default {
   data() {
@@ -171,6 +166,7 @@ export default {
       lang: sessionStorage.getItem("LANG"),
       tabIndex: 0,
       tabArr: ["专项疾病防控", "传染研究", "卫生防疫"],
+      videoTxt: this.$t("video.txt"),
       playerOptions: {
         autoplay: false, // 如果true,浏览器准备好时开始回放。
         muted: false, // 默认情况下将会消除任何音频。
@@ -201,9 +197,9 @@ export default {
       this.tabIndex = index;
     }
   },
-  components: {
-    videoPlayer
-  },
+  // components: {
+  //   videoPlayer
+  // },
   mounted() {
     this.$nextTick(() => {
       new WOW().init({
@@ -229,21 +225,21 @@ export default {
 }
 
 .col-1 {
-  height: 643px;
   padding-top: 130px;
+  padding-bottom: 100px;
   overflow: hidden;
   .section {
     .con {
-      display: flex;
       background-color: #fafafa;
       .videobox {
         width: 563px;
         height: 383px;
+        margin-right: 20px;
         background-color: rgba(0, 0, 0, 0.5);
-        flex: 0 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        float: left;
+        img {
+          width: 100%;
+        }
         .video-player {
           width: 563px;
         }
@@ -389,6 +385,15 @@ export default {
   }
 }
 
+.en {
+  .col-2 .section ul li.li2 {
+    margin-bottom: 10px;
+  }
+  .col-2 .section ul li.li3 {
+    line-height: 130%;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .banner {
     height: 260px;
@@ -402,11 +407,10 @@ export default {
     padding: 0;
     .section {
       .con {
+        background-color: #fff;
         flex-wrap: wrap;
         .videobox {
-          width: 100%;
-          height: auto;
-          background-color: #fff;
+          display: none;
         }
         .videotxt {
           padding: 20px;
@@ -418,11 +422,11 @@ export default {
     height: auto;
     padding: 0;
     .section {
-      ul{
+      ul {
         width: 100%;
         height: auto;
         li.li3 {
-          padding: 0 20px;
+          padding: 20px;
         }
       }
     }

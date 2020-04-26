@@ -6,12 +6,12 @@
 
         <div class="menu-pc">
           <router-link to="/">{{ $t("nav[0]") }}</router-link>
-          <a href="javascript:;">{{ $t("nav[1]") }}</a>
-          <a href="javascript:;">{{ $t("nav[2]") }}</a>
+          <router-link to="/team">{{ $t("nav[1]") }}</router-link>
+          <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a>
-          <a href="javascript:;">{{ $t("nav[4]") }}</a>
+          <a href="javascript:;">{{ $t("nav[4]") }}</a> -->
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <!-- <div class="menuLanguage">
+          <div class="menuLanguage">
             {{ $t("language") }}
             <ul>
               <li
@@ -27,7 +27,7 @@
                 English
               </li>
             </ul>
-          </div> -->
+          </div>
         </div>
 
         <div
@@ -38,9 +38,9 @@
         <div class="menu-mobile" v-show="showMenu">
           <router-link to="/">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
-          <router-link to="/technology">{{ $t("nav[2]") }}</router-link>
-          <router-link to="/cooperation">{{ $t("nav[3]") }}</router-link>
-          <a :href="$t('whitePager')" target="_blank">{{ $t("nav[4]") }}</a>
+          <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
+          <a href="javascript:;">{{ $t("nav[3]") }}</a>
+          <a href="javascript:;">{{ $t("nav[4]") }}</a> -->
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
           <div class="tit">{{ $t("language") }}</div>
           <a :class="lang == 'zh' ? 'active' : ''" @click="changeLanguageVal">
@@ -59,12 +59,24 @@
           Copyright © 2019 Seele Foundation
         </div>
         <div class="footer-link">
-          <a href="https://medium.com/@rong.guanhua" class="fl-01" target="_blank"></a>
+          <a
+            href="https://medium.com/@rong.guanhua"
+            class="fl-01"
+            target="_blank"
+          ></a>
           <!-- <a href="javascript:;" class="fl-02" target="_blank"></a> -->
           <a href="https://t.me/Seelen2020" class="fl-03" target="_blank"></a>
-          <a href="https://twitter.com/n_seele" class="fl-04" target="_blank"></a>
+          <a
+            href="https://twitter.com/n_seele"
+            class="fl-04"
+            target="_blank"
+          ></a>
           <!-- <a href="javascript:;" class="fl-05" target="_blank"></a> -->
-          <a href="https://weibo.com/6561132287/profile?topnav=1&wvr=6" class="fl-06" target="_blank"></a>
+          <a
+            href="https://weibo.com/6561132287/profile?topnav=1&wvr=6"
+            class="fl-06"
+            target="_blank"
+          ></a>
         </div>
       </div>
     </div>
@@ -153,7 +165,7 @@ body {
     line-height: 10 0px;
     text-align: center;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 15px;
     font-size: 18px;
     position: relative;
     color: #3f3f3f;
@@ -339,6 +351,10 @@ body {
         background-size: contain;
       }
     }
+  }
+  .footer {
+    height: auto;
+    padding: 30px 0;
   }
 }
 </style>

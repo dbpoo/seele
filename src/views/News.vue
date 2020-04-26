@@ -52,7 +52,7 @@ export default {
       isLoading: false,
       isOver: false,
       page: 1,
-      categories: sessionStorage.getItem("LANG") == "zh" ? 12 : 13,
+      categories: sessionStorage.getItem("LANG") == "zh" ? 4 : 5, // 12 : 13
       listArr: []
     };
   },
@@ -99,6 +99,7 @@ export default {
 .banner-news {
   height: 581px;
   background: url("../assets/banner_news.jpg") center 0 no-repeat;
+  background-size: 100% 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,5 +198,42 @@ export default {
   }
 }
 
-@media screen and (max-width: 640px) {}
+@media screen and (max-width: 640px) {
+  .banner-news {
+    height: 150px;
+    span {
+      font-size: 40px;
+    }
+  }
+  .news-list {
+    width: 100%;
+    padding: 20px;
+    .item {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      background-color: #fafafa;
+      img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+      }
+      .text {
+        padding: 10px;
+        h3 {
+          font-size: 20px;
+          line-height: 120%;
+          margin-bottom: 10px;
+        }
+        p {
+          display: none;
+        }
+        .infos .more {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 </style>

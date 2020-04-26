@@ -3,69 +3,29 @@
     <div class="banner-team">
       <span>{{ $t("team.tit") }}</span>
     </div>
-    <div class="team">
+    
+    <div class="team bg-gray" v-for="(item, index) in list" :key="index">
       <div class="section">
         <div class="team-t">
           <div class="tit">
-            {{ $t("team.tit1") }} <span>{{ team }}</span>
+            {{ item.tit }} <span>{{ team }}</span>
           </div>
         </div>
         <div class="team-c">
-          <div class="box" v-for="(item, index) in list1" :key="index">
+          <div class="box" v-for="(sitem, sindex) in item.arr" :key="sindex">
             <ul>
-              <li class="li1"><img :src="item.img" alt="" srcset="" /></li>
-              <li class="li2">{{ item.name }}</li>
+              <li class="li1"><img :src="sitem.img" alt="" srcset="" /></li>
+              <li class="li2">{{ sitem.name }}</li>
               <li class="li3"><span></span></li>
-              <li class="li4">{{ item.position }}</li>
+              <li class="li4">{{ sitem.position }}</li>
             </ul>
-            <div class="tips" v-html="item.tips"></div>
+            <div class="tips" v-html="sitem.tips"></div>
             <div class="tips-arrow"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="team bg-gray">
-      <div class="section">
-        <div class="team-t">
-          <div class="tit">
-            {{ $t("team.tit2") }} <span>{{ team }}</span>
-          </div>
-        </div>
-        <div class="team-c">
-          <div class="box" v-for="(item, index) in list2" :key="index">
-            <ul>
-              <li class="li1"><img :src="item.img" alt="" srcset="" /></li>
-              <li class="li2">{{ item.name }}</li>
-              <li class="li3"><span></span></li>
-              <li class="li4">{{ item.position }}</li>
-            </ul>
-            <div class="tips" v-html="item.tips"></div>
-            <div class="tips-arrow"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="team">
-      <div class="section">
-        <div class="team-t">
-          <div class="tit">
-            {{ $t("team.tit3") }} <span>{{ team }}</span>
-          </div>
-        </div>
-        <div class="team-c">
-          <div class="box" v-for="(item, index) in list3" :key="index">
-            <ul>
-              <li class="li1"><img :src="item.img" alt="" srcset="" /></li>
-              <li class="li2">{{ item.name }}</li>
-              <li class="li3"><span></span></li>
-              <li class="li4">{{ item.position }}</li>
-            </ul>
-            <div class="tips" v-html="item.tips"></div>
-            <div class="tips-arrow"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </template>
 
@@ -74,10 +34,8 @@ export default {
   data() {
     return {
       lang: sessionStorage.getItem("LANG"),
-      team: sessionStorage.getItem("LANG") === "zh" ? "团队" : "team1",
-      list1: this.$t("team.plist1"),
-      list2: this.$t("team.plist2"),
-      list3: this.$t("team.plist3")
+      team: sessionStorage.getItem("LANG") === "zh" ? "团队" : "team",
+      list: this.$t("team.plist")
     };
   },
   mounted() {}
@@ -126,6 +84,11 @@ export default {
     ul {
       li {
         text-align: center;
+      }
+      li.li1 {
+        img {
+          width: 143px;
+        }
       }
       li.li2 {
         font-size: 24px;
@@ -176,6 +139,44 @@ export default {
       .tips,
       .tips-arrow {
         display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .banner-team {
+    height: 150px;
+    span {
+      font-size: 40px;
+    }
+  }
+  .team-t {
+    .tit {
+      width: 100%;
+      height: 100px;
+      font-size: 20px;
+      padding-top: 46px;
+      background-size: contain;
+    }
+  }
+  .team-c {
+    padding: 20px 15px;
+    .box {
+      width: 33%;
+      padding: 10px;
+      ul {
+        li.li1 {
+          img {
+            width: 100%;
+          }
+        }
+        li.li2 {
+          font-size: 14px;
+        }
+        li.li4 {
+          font-size: 12px;
+        }
       }
     }
   }
