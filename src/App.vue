@@ -16,13 +16,13 @@
             <ul>
               <li
                 :class="lang == 'zh' ? 'active' : ''"
-                @click="changeLanguageVal"
+                @click="changeLanguageVal('en')"
               >
                 中文
               </li>
               <li
                 :class="lang == 'en' ? 'active' : ''"
-                @click="changeLanguageVal"
+                @click="changeLanguageVal('zh')"
               >
                 English
               </li>
@@ -43,16 +43,22 @@
           <a href="javascript:;">{{ $t("nav[4]") }}</a> -->
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
           <div class="tit">{{ $t("language") }}</div>
-          <a :class="lang == 'zh' ? 'active' : ''" @click="changeLanguageVal">
+          <a
+            :class="lang == 'zh' ? 'active' : ''"
+            @click="changeLanguageVal('en')"
+          >
             中文
           </a>
-          <a :class="lang == 'en' ? 'active' : ''" @click="changeLanguageVal">
+          <a
+            :class="lang == 'en' ? 'active' : ''"
+            @click="changeLanguageVal('zh')"
+          >
             English
           </a>
         </div>
       </div>
     </div>
-    <router-view />
+    <router-view v-if="RouterState" />
     <div class="footer">
       <div class="section">
         <div class="footer-copyright">
@@ -89,22 +95,35 @@ export default {
   data() {
     return {
       showMenu: false,
-      lang: sessionStorage.getItem("LANG")
+      lang: sessionStorage.getItem("LANG"),
+      RouterState: true
+    };
+  },
+  provide() {
+    return {
+      reload: this.reload
     };
   },
   methods: {
-    changeLanguageVal() {
-      if (this.lang === "zh") {
-        this.lang = "en";
-        this.$i18n.locale = this.lang; // 关键语句
-        sessionStorage.setItem("LANG", this.lang);
-      } else {
+    reload() {
+      this.RouterState = false;
+      this.$nextTick(() => {
+        this.RouterState = true;
+      });
+    },
+    changeLanguageVal(language) {
+      if (language === "en") {
         this.lang = "zh";
         this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
+      } else if (language === "zh") {
+        this.lang = "en";
+        this.$i18n.locale = this.lang; // 关键语句
+        sessionStorage.setItem("LANG", this.lang);
       }
+      this.showMenu = false;
       this.$router.push({ path: "/" });
-      location.reload();
+      this.reload();
     },
     addCookie(val) {
       sessionStorage.setItem("LANG", val);

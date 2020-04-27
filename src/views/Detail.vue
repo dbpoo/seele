@@ -131,7 +131,7 @@ export default {
     }
     .title {
       margin: 20px;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: bold;
     }
     .content {
