@@ -60,11 +60,11 @@
         </div>
         <div class="footer-link">
           <a
-            href="https://medium.com/@rong.guanhua"
+            href="https://medium.com/@seelen"
             class="fl-01"
             target="_blank"
           ></a>
-          <a href="https://medium.com/@seelen" class="fl-02" target="_blank"></a>
+          <!-- <a href="https://medium.com/@seelen" class="fl-02" target="_blank"></a> -->
           <a href="https://t.me/Seelen2020" class="fl-03" target="_blank"></a>
           <a
             href="https://twitter.com/n_seele"
