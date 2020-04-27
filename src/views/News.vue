@@ -140,6 +140,7 @@ export default {
       flex: 1;
       h3 {
         font-size: 24px;
+        color: #484848;
       }
       p {
         text-indent: 2em;
@@ -222,7 +223,7 @@ export default {
       .text {
         padding: 10px;
         h3 {
-          font-size: 20px;
+          font-size: 18px;
           line-height: 120%;
           margin-bottom: 10px;
         }

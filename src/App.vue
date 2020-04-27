@@ -71,7 +71,7 @@
             target="_blank"
           ></a>
           <!-- <a href="https://medium.com/@seelen" class="fl-02" target="_blank"></a> -->
-          <a href="https://t.me/Seelen2020" class="fl-03" target="_blank"></a>
+          <a href="https://t.me/seelenseelen2020" class="fl-03" target="_blank"></a>
           <a
             href="https://twitter.com/n_seele"
             class="fl-04"
