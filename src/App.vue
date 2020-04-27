@@ -64,7 +64,7 @@
             class="fl-01"
             target="_blank"
           ></a>
-          <!-- <a href="javascript:;" class="fl-02" target="_blank"></a> -->
+          <a href="https://medium.com/@seelen" class="fl-02" target="_blank"></a>
           <a href="https://t.me/Seelen2020" class="fl-03" target="_blank"></a>
           <a
             href="https://twitter.com/n_seele"
@@ -103,6 +103,7 @@ export default {
         this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
       }
+      this.$router.push({ path: "/" });
       location.reload();
     },
     addCookie(val) {
@@ -355,6 +356,11 @@ body {
   .footer {
     height: auto;
     padding: 30px 0;
+    .footer-link {
+      a {
+        margin: 0 10px;
+      }
+    }
   }
 }
 </style>

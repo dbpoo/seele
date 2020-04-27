@@ -6,7 +6,7 @@
     <div class="detail" v-if="newsCon">
       <div class="section">
         <div class="infos">
-          <div class="location">新闻动态 &gt; <span>新闻详情</span></div>
+          <div class="location">{{ $t("news.tit") }} &gt; <span>{{ $t("news.tit2") }}</span></div>
           <div class="time">{{ newsDate }}</div>
         </div>
         <div class="title">{{ newsTit }}</div>
@@ -99,7 +99,6 @@ export default {
       text-indent: 2em;
       font-size: 24px;
       line-height: 150%;
-      text-align: justify;
       padding-bottom: 10px;
     }
   }
@@ -132,12 +131,13 @@ export default {
     }
     .title {
       margin: 20px;
-      font-size: 24px;
+      font-size: 14px;
+      font-weight: bold;
     }
     .content {
       margin-bottom: 50px;
       /deep/ p {
-        font-size: 20px;
+        font-size: 14px;
         line-height: 150%;
       }
     }

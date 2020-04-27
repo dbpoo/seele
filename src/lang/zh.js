@@ -4,6 +4,7 @@ module.exports = {
   language: "语言",
   news: {
     tit: "新闻动态",
+    tit2: "新闻详情",
     more: "更多",
     loadmore: "加载更多",
     loadend: "没有更多了"

@@ -10,7 +10,8 @@ module.exports = {
   whitePager: "/pdf/zh/newpower.pdf",
   language: "language",
   news: {
-    tit: "news",
+    tit: "News",
+    tit2: "Content",
     more: "more",
     loadmore: "load more",
     loadend: "no data"
