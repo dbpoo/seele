@@ -38,7 +38,7 @@ export default {
   methods: {
     getCms() {
       this.$aixos
-        .get("http://api.lkbt.pro/wp-json/wp/v2/posts/" + this.id)
+        .get("//api.lkbt.pro/wp-json/wp/v2/posts/" + this.id)
         .then(res => {
           this.newsTit = res.data.title.rendered;
           this.newsCon = res.data.content.rendered;

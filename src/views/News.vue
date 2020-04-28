@@ -61,7 +61,7 @@ export default {
       this.isLoading = true;
       this.$aixos
         .get(
-          "http://api.lkbt.pro/wp-json/wp/v2/posts?categories=" +
+          "//api.lkbt.pro/wp-json/wp/v2/posts?categories=" +
             this.categories +
             "&page=" +
             page
