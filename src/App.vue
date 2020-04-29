@@ -8,8 +8,8 @@
           <router-link to="/">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
-          <a href="javascript:;">{{ $t("nav[3]") }}</a>
-          <a href="javascript:;">{{ $t("nav[4]") }}</a> -->
+          <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
+          <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
           <div class="menuLanguage">
             {{ $t("language") }}
@@ -39,8 +39,8 @@
           <router-link to="/">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
-          <a href="javascript:;">{{ $t("nav[3]") }}</a>
-          <a href="javascript:;">{{ $t("nav[4]") }}</a> -->
+          <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
+          <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
           <div class="tit">{{ $t("language") }}</div>
           <a

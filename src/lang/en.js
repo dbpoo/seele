@@ -7,7 +7,7 @@ module.exports = {
     "Whitepaper",
     "News"
   ],
-  whitePager: "/pdf/zh/newpower.pdf",
+  whitePager: "/pdf/zh/seele.pdf",
   language: "language",
   news: {
     tit: "News",
