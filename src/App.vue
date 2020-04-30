@@ -11,6 +11,7 @@
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
+          <a href="https://seeleview.net/" target="_blank">{{ $t("nav[6]") }}</a>
           <div class="menuLanguage">
             {{ $t("language") }}
             <ul>
@@ -64,6 +65,7 @@
         <div class="footer-copyright">
           Copyright © 2020 Seele Foundation
         </div>
+        <div class="footer-email"><a href="mailto:contact@seelen.pro">contact@seelen.pro</a></div>
         <div class="footer-link">
           <a
             href="https://medium.com/@seelen"
@@ -81,6 +83,11 @@
           <a
             href="https://weibo.com/6561132287/profile?topnav=1&wvr=6"
             class="fl-06"
+            target="_blank"
+          ></a>
+          <a
+            href="https://seeleview.net/"
+            class="fl-07"
             target="_blank"
           ></a>
         </div>
@@ -280,7 +287,12 @@ body {
     text-align: center;
     font-size: 20px;
     color: #007082;
-    margin-bottom: 30px;
+  }
+  .footer-email {
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
+    color: #007082;
   }
   .footer-link {
     display: flex;
@@ -310,6 +322,9 @@ body {
     }
     a.fl-06 {
       background: url("./assets/fl_06.png") 0 0 no-repeat;
+    }
+    a.fl-07 {
+      background: url("./assets/fl_07.png") 0 0 no-repeat;
     }
   }
 }

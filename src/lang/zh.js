@@ -1,5 +1,5 @@
 module.exports = {
-  nav: ["首页", "团队", "技术生态", "产业合作", "白皮书", "新闻"],
+  nav: ["首页", "团队", "技术生态", "产业合作", "白皮书", "新闻", "区块浏览器"],
   whitePager: "/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
   language: "语言",
   news: {

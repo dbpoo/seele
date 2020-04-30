@@ -5,7 +5,8 @@ module.exports = {
     "Technology Ecology",
     "Industrial Cooperation",
     "Whitepaper",
-    "News"
+    "News",
+    "Seeleview"
   ],
   whitePager: "/pdf/en/Seele_White_Paper_English_v3.1.pdf",
   language: "language",
