@@ -5,13 +5,15 @@
         <a href="javascript:;" class="logo"></a>
 
         <div class="menu-pc">
-          <router-link to="/">{{ $t("nav[0]") }}</router-link>
+          <router-link :to="lang == 'zh' ? '/' : '/en'">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <a href="https://seeleview.net/" target="_blank">{{ $t("nav[6]") }}</a>
+          <a href="https://seeleview.net/" target="_blank">{{
+            $t("nav[6]")
+          }}</a>
           <div class="menuLanguage">
             {{ $t("language") }}
             <ul>
@@ -37,12 +39,15 @@
           @click="showMenu = !showMenu"
         ></div>
         <div class="menu-mobile" v-show="showMenu">
-          <router-link to="/">{{ $t("nav[0]") }}</router-link>
+          <router-link :to="lang == 'zh' ? '/' : '/en'">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
+          <a href="https://seeleview.net/" target="_blank">{{
+            $t("nav[6]")
+          }}</a>
           <div class="tit">{{ $t("language") }}</div>
           <a
             :class="lang == 'zh' ? 'active' : ''"
@@ -65,7 +70,9 @@
         <div class="footer-copyright">
           Copyright © 2020 Seele Foundation
         </div>
-        <div class="footer-email"><a href="mailto:contact@seelen.pro">contact@seelen.pro</a></div>
+        <div class="footer-email">
+          <a href="mailto:contact@seelen.pro">contact@seelen.pro</a>
+        </div>
         <div class="footer-link">
           <a
             href="https://medium.com/@seelen"
@@ -73,7 +80,11 @@
             target="_blank"
           ></a>
           <!-- <a href="https://medium.com/@seelen" class="fl-02" target="_blank"></a> -->
-          <a href="https://t.me/seelenseelen2020" class="fl-03" target="_blank"></a>
+          <a
+            href="https://t.me/seelenseelen2020"
+            class="fl-03"
+            target="_blank"
+          ></a>
           <a
             href="https://twitter.com/n_seele"
             class="fl-04"
@@ -85,11 +96,7 @@
             class="fl-06"
             target="_blank"
           ></a>
-          <a
-            href="https://seeleview.net/"
-            class="fl-07"
-            target="_blank"
-          ></a>
+          <a href="https://seeleview.net/" class="fl-07" target="_blank"></a>
         </div>
       </div>
     </div>
@@ -123,13 +130,16 @@ export default {
         this.lang = "zh";
         this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
+        this.showMenu = false;
+        this.$router.push({ path: "/" });
       } else if (language === "zh") {
         this.lang = "en";
         this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
+        this.showMenu = false;
+        this.$router.push({ path: "/en" });
       }
-      this.showMenu = false;
-      this.$router.push({ path: "/" });
+
       this.reload();
     },
     addCookie(val) {

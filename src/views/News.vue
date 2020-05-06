@@ -119,18 +119,8 @@ export default {
     color: #6c6c6c;
     cursor: pointer;
     padding: 36px 28px;
-    &::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 0;
-      left: 0;
-      bottom: -36px;
-      border-top: 1px solid #c9c9c9;
-    }
-    &:nth-last-child(2)::after {
-      border-top: 0;
-    }
+    border-top: 1px solid #c9c9c9;
+    overflow: hidden;
     img {
       margin-right: 40px;
       width: 224px;
