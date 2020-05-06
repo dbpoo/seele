@@ -71,7 +71,7 @@
           Copyright © 2020 Seele Foundation
         </div>
         <div class="footer-email">
-          <a href="mailto:contact@seelen.pro">Contact@SeeleN.pro</a>
+          Contact@SeeleN.pro
         </div>
         <div class="footer-link">
           <a
