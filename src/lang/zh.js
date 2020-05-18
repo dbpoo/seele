@@ -52,7 +52,7 @@ module.exports = {
           },
           {
             img: "/static/team/Jusitin.png",
-            name: "Jusitin Zhang 博士",
+            name: "Justin Zhang 博士",
             position: "首席技术官CTO",
             tips:
               "负责项目的总体技术架构。<br>清华大学精密仪器系博士，16年以上IT平台设计开发经验，先后服务于贝尔实验室，IBM中国研究院等公司，擅长人工智能分析、数据平台的设计及开发。<br>2018年进入区块链行业，擅长区块链中的共识算法，多方安全计算，联邦学习等算法逻辑及体系架构。"

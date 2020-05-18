@@ -60,7 +60,7 @@ module.exports = {
           },
           {
             img: "/static/team/Jusitin.png",
-            name: "Dr. Jusitin Zhang",
+            name: "Dr. Justin Zhang",
             position: "CTO",
             tips:
               "Dr. Jusitin Zhang is responsible for the overall technical architecture of the project.<br>Ph.D. in the major of Precision Instruments. He has more than 16 years of experience in IT platform design and development. He has served Bell Labs, IBM China Research Institute and other companies, and he is good at artificial intelligence analysis and data platform design and development. <br>He entered blockchain industry in 2018 and he is good at algorithm logic and system architecture such as consensus algorithms in blockchain, multi-party secure computing, and federal learning."
