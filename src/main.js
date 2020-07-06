@@ -4,16 +4,18 @@ import router from "./router";
 import store from "./store";
 import VueI18n from "vue-i18n";
 import axios from "axios";
+import MetaInfo from "vue-meta-info";
 
 Vue.use(VueI18n);
+Vue.use(MetaInfo);
 Vue.prototype.$aixos = axios;
 Vue.config.productionTip = false;
 
-const sysLang = navigator.language.substr(0, 2);
-const localLang = sessionStorage.getItem("LANG");
+// const sysLang = navigator.language.substr(0, 2);
+const localLang = sessionStorage.getItem("LANG") || "zh";
 
 const i18n = new VueI18n({
-  locale: localLang || sysLang, // 语言标识
+  locale: localLang, // 语言标识
   messages: {
     zh: require("./lang/zh"), // 中文语言包
     en: require("./lang/en") // 英文语言包
@@ -21,7 +23,7 @@ const i18n = new VueI18n({
 });
 
 if (!localLang) {
-  sessionStorage.setItem("LANG", sysLang);
+  sessionStorage.setItem("LANG", "zh");
 }
 
 router.afterEach((to, from, next) => {

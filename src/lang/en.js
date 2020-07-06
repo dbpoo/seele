@@ -1,4 +1,6 @@
 module.exports = {
+  mateName: "Seele,SeeleN,Seele-N, Exchange Platform, Infrastructure Exchange Platform, Data Infrastructure Exchange Platform, Knowledge interconnection, value interconnection, Blockchain, Ethereum,Bitcoin,MTC,ETH,BTC,ICO",
+  mateContent: 'Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data Infrastructure Exchange Platform , constructed a complete knowledge chain, has spawned a large number of new applications, new interactive models.',
   nav: [
     "Home",
     "Team",
