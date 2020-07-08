@@ -39,7 +39,7 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  let lang = sessionStorage.getItem("LANG");
+  let lang = sessionStorage.getItem("LANG") || "zh";
   let keywords =
     "Seele元一Seele,SeeleN,Seele-N,交换平台,资产价值交换平台,数据资产价值交换平台,知识互联,价值互联,可信交换,人工智能,大数据,智能合约";
   let description =
