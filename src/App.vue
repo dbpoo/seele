@@ -71,7 +71,7 @@
           Copyright © 2020 Seele Foundation
         </div>
         <div class="footer-email">
-          Official Email：contact@seelen.pro
+          <span>Official Email： </span><span>contact@seelen.pro<br>business@seelen.pro</span>
         </div>
         <div class="footer-link">
           <a
@@ -297,14 +297,21 @@ body {
     text-align: center;
     font-size: 20px;
     color: #007082;
+    padding-bottom: 20px;
   }
   .footer-email {
     overflow: hidden;
     text-align: center;
-    padding: 20px 0;
     color: #007082;
+    display: flex;
+    justify-content: center;
+    span{
+      display: inline-block;
+      text-align: left;
+    }
   }
   .footer-link {
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
