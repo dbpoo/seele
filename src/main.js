@@ -22,8 +22,10 @@ const i18n = new VueI18n({
   }
 });
 
-if (!localLang) {
+if (localLang == "zh") {
   sessionStorage.setItem("LANG", "zh");
+} else {
+  sessionStorage.setItem("LANG", "en");
 }
 
 router.afterEach((to, from, next) => {
