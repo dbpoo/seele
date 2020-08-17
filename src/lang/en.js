@@ -10,7 +10,7 @@ module.exports = {
     "News",
     "Seeleview"
   ],
-  whitePager: "page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
+  whitePager: "/page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
   language: "language",
   news: {
     tit: "News",

@@ -4616,7 +4616,7 @@ video::-webkit-media-text-track-display {
 }
 .banner {
   height: 810px;
-  background: url(https://seelen.pro/img/banner.jpg) center 0 no-repeat;
+  background: url(https://seelen.pro/page/img/banner.jpg) center 0 no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
