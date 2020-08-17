@@ -2,7 +2,7 @@ module.exports = {
   mateName: "Seele元一Seele,SeeleN,Seele-N,交换平台,资产价值交换平台,数据资产价值交换平台,知识互联,价值互联,可信交换,人工智能,大数据,智能合约",
   mateContent: "Seele项目团队通过深入研究，以知识互联解决知识的结构、继承、传递等体系问题，以价值互联解决知识发布、传播、使用过程中的权益冲突。知识互联+价值互联，融合建立“产业数据基础资源交换平台”，构建完整的知识链条，催生大量新型应用、新型互动模式的涌现。",
   nav: ["首页", "团队", "技术生态", "产业合作", "白皮书", "新闻", "区块浏览器"],
-  whitePager: "/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
+  whitePager: "page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
   language: "语言",
   news: {
     tit: "新闻动态",
@@ -46,42 +46,42 @@ module.exports = {
         tit: "核心",
         arr: [
           {
-            img: "/static/team/jeff.png",
+            img: "/page/static/team/jeff.png",
             name: "Jeff Ho 博士",
             position: "转型升级导师及首席经济学家",
             tips:
               "指导Seele转型升级、战略规划和产业整合。<br>1985年毕业于哥伦比亚大学经济系，师从诺贝尔奖得主罗伯特·索洛，后进入摩根史坦利工作多年。<br>1993年在美国洛杉矶南加州大学获得金融学博士，后加入知名信用评级机构标准普尔工作多年。<br>1998年10月被派往新加坡担任亚太地区“主权评级”地区负责人。<br>2006年与合作伙伴创建新加坡首能投资有限公司，专精股票、债券、期货和地产证券化项目融资。<br>2008年至今，任新加坡首能投资有限公司和马来西亚首能能源贸易公司董事总经理。"
           },
           {
-            img: "/static/team/Jusitin.png",
+            img: "/page/static/team/Jusitin.png",
             name: "Justin Zhang 博士",
             position: "首席技术官CTO",
             tips:
               "负责项目的总体技术架构。<br>清华大学精密仪器系博士，16年以上IT平台设计开发经验，先后服务于贝尔实验室，IBM中国研究院等公司，擅长人工智能分析、数据平台的设计及开发。<br>2018年进入区块链行业，擅长区块链中的共识算法，多方安全计算，联邦学习等算法逻辑及体系架构。"
           },
           {
-            img: "/static/team/peng.png",
+            img: "/page/static/team/peng.png",
             name: "Peng Wang 先生",
             position: "首席市场官CMO",
             tips:
               "负责项目的生态建设和合作拓展。<br>资深投资人，国内首批IDL可视化计算机语言专家、大数据专家。<br>2017年起担任加密数字货币基金合伙人，专注于区块链早期项目投资。<br>曾任BCH生态基金负责人。"
           },
           {
-            img: "/static/team/Evan.png",
+            img: "/page/static/team/Evan.png",
             name: "Evan 先生",
             position: "首席运营官COO",
             tips:
               "负责项目的综合营销和运营管理。<br>18年以上互联网营销推广经验，历任营销总监、发行副总裁等职务。<br>2018年进入区块链行业，擅长对应用于产业方面的区块链项目进行推广与宣传。"
           },
           {
-            img: "/static/team/biwei.png",
+            img: "/page/static/team/biwei.png",
             name: "Wei Bi 博士",
             position: "特别技术顾问",
             tips:
               "向Seele运营团队提供技术顾问支持。<br>伦敦大学视觉科学博士，牛津大学计算机科学硕士，中国区块链技术创新与应用联盟副秘书长，曾任伦敦大学研究员，研究生博士生导师。<br>8项区块链技术专利第一发明人，多次受邀参加大型国际学术会议，其成果发表在新英格兰顶级学术期刊，文章、观点被BBC、英中时报、 伦敦华语广播电台、Complex UK等媒体报道。"
           },
           {
-            img: "/static/team/Amos.png",
+            img: "/page/static/team/Amos.png",
             name: "Amos 先生",
             position: "特别产业顾问",
             tips: "向Seele运营团队提供产业顾问支持。"
@@ -91,10 +91,10 @@ module.exports = {
     ]
   },
   img: {
-    banner: "static/zh/banner_txt.png",
-    tit3: "static/zh/tit_3.jpg",
-    video: "static/zh/video.jpg",
-    fk: ["static/zh/fk_1.jpg", "static/zh/fk_2.jpg", "static/zh/fk_3.jpg"]
+    banner: "/page/static/zh/banner_txt.png",
+    tit3: "/page/static/zh/tit_3.jpg",
+    video: "/page/static/zh/video.jpg",
+    fk: ["/page/static/zh/fk_1.jpg", "/page/static/zh/fk_2.jpg", "/page/static/zh/fk_3.jpg"]
   },
   history: [
     {

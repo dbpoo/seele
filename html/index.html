@@ -26,25 +26,25 @@
         <div class="section">
           <a href="javascript:;" class="logo"></a>
           <div class="menu-pc">
-            <a href="#/" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="#/team" class="">团队</a
-            ><a href="https://seelen.pro/pdf/zh/Seele_White_Paper_CN_v3.1.pdf">白皮书</a><a href="#/news" class="">新闻</a
+            <a href="index.html" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="/page/#/team" class="">团队</a
+            ><a href="https://seelen.pro/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf">白皮书</a><a href="/page/#/news" class="">新闻</a
             ><a href="https://seeleview.net/" target="_blank">区块浏览器</a>
             <div class="menuLanguage">
               语言
               <ul>
                 <li class="active">
-                  中文
+                  <a href="index.html">中文</a>
                 </li>
                 <li class="">
-                  English
+                  <a href="index_en.html">English</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="menu-toggle"></div>
           <div class="menu-mobile" style="display: none;">
-            <a href="#/" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="#/team" class="">团队</a
-            ><a href="https://seelen.pro/pdf/zh/Seele_White_Paper_CN_v3.1.pdf">白皮书</a><a href="#/news" class="">新闻</a
+            <a href="index.html" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="/page/#/team" class="">团队</a
+            ><a href="https://seelen.pro/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf">白皮书</a><a href="/page/#/news" class="">新闻</a
             ><a href="https://seeleview.net/" target="_blank">区块浏览器</a>
             <div class="tit">语言</div>
             <a class="active"> 中文 </a
@@ -57,13 +57,13 @@
       <div class="container">
         <div class="banner-container">
           <div data-wow-duration="3s" class="banner wow zoomInBg" style="visibility: visible; animation-duration: 3s;">
-            <img src="https://seelen.pro/static/zh/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;" />
+            <img src="https://seelen.pro/page/static/zh/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;" />
           </div>
         </div>
         <div class="col-1">
           <div class="section wow fadeInUp" style="visibility: hidden; animation-name: none;">
             <div class="con">
-              <div class="videobox"><img src="https://seelen.pro/static/zh/video.jpg" alt="" srcset="" /></div>
+              <div class="videobox"><img src="https://seelen.pro/page/static/zh/video.jpg" alt="" srcset="" /></div>
               <div class="videotxt">
                 <p>
                   Seele项目团队通过深入研究，以知识互联解决知识的结构、继承、传递等体系问题，以价值互联解决知识发布、传播、使用过程中的权益冲突。知识互联+价值互联，融合建立“产业数据基础资源交换平台”，构建完整的知识链条，催生大量新型应用、新型互动模式的涌现。
@@ -75,7 +75,7 @@
             </div>
           </div>
         </div>
-        <div class="news-list" id="new-list"></div>
+        <div class="news-list wow fadeInUp" id="new-list"></div>
         <div class="loadmore">
           <div class="ball-pulse" style="display:none;">
             <div></div>
@@ -107,6 +107,7 @@
     <script src="js/wow.min.js"></script>
     <script>
       $(function() {
+        sessionStorage.setItem("LANG", "zh");
         new WOW().init();
         let isLoading = true;
         let page = 1;
@@ -131,11 +132,11 @@
               $(".ball-pulse").hide();
               let $elems = "";
               res.forEach(function(item, index) {
-                $elems += `<div class="item"><div class="text"><h3>${item.title.rendered}</h3><p>${
+                $elems += `<div class="item"><div class="text"><h3><a href="/page/#/detail/${item.id}">${item.title.rendered}</a></h3><p>${
                   item.excerpt.rendered
                 } […]</p><div class="infos"><div class="time">[${
                   item.date.split("T")[0]
-                }]</div><div class="more">更多 &gt;&gt;</div></div></div></div>`;
+                }]</div><div class="more"><a href="/page/#/detail/${item.id}">更多 &gt;&gt;</a></div></div></div></div>`;
               });
               $container.append($elems);
             },

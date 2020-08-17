@@ -10,7 +10,7 @@ module.exports = {
     "News",
     "Seeleview"
   ],
-  whitePager: "/pdf/en/Seele_White_Paper_English_v3.1.pdf",
+  whitePager: "page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
   language: "language",
   news: {
     tit: "News",
@@ -54,42 +54,42 @@ module.exports = {
         tit: "Core",
         arr: [
           {
-            img: "/static/team/jeff.png",
+            img: "/page/static/team/jeff.png",
             name: "Dr. Jeff Ho",
             position: "Transformation and upgrading advisor and chief economist",
             tips:
               "Dr. Jeff Ho is guiding Seele's transformation and upgrading, strategic planning and industrial integration.<br>He graduated from the Economics Department of Columbia University in 1985. He studied with Nobel Prize winner Robert Solo before joining Morgan Stanley for many years. <br>He obtained a Ph.D. in Finance from the University of Southern California in Los Angeles in 1993, and then joined the well-known credit rating agency Standard & Poor's for many years. <br>In October 1998, he was assigned to Singapore as the regional head of the 'sovereign rating' in the Asia-Pacific region. <br>In 2006, he established Singapore Shouneng Investment Co., Ltd. with a partner, specializing in the financing of stocks, bonds, futures and real estate securitization projects. <br>Since 2008, he has served as the managing director of Singapore Shouneng Co., Ltd. and Malaysia Shouneng Trading Co., Ltd."
           },
           {
-            img: "/static/team/Jusitin.png",
+            img: "/page/static/team/Jusitin.png",
             name: "Dr. Justin Zhang",
             position: "CTO",
             tips:
               "Dr. Jusitin Zhang is responsible for the overall technical architecture of the project.<br>Ph.D. in the major of Precision Instruments. He has more than 16 years of experience in IT platform design and development. He has served Bell Labs, IBM China Research Institute and other companies, and he is good at artificial intelligence analysis and data platform design and development. <br>He entered blockchain industry in 2018 and he is good at algorithm logic and system architecture such as consensus algorithms in blockchain, multi-party secure computing, and federal learning."
           },
           {
-            img: "/static/team/peng.png",
+            img: "/page/static/team/peng.png",
             name: "Mr. Peng Wang",
             position: "CMO",
             tips:
               "Mr. Peng Wang is responsible for the project's ecological construction and cooperative development.<br>a senior investor, the first batch of IDL visualization computer language experts and big data experts in China. <br>He has been a partner of the encrypted digital currency fund since 2017, focusing on early investment in blockchain projects. <br>Former head of BCH Ecological Foundation."
           },
           {
-            img: "/static/team/Evan.png",
+            img: "/page/static/team/Evan.png",
             name: "Mr. Evan",
             position: "COO",
             tips:
               "Mr. Evan is responsible for integrated marketing and operation management.<br>has more than 18 years of experience in Internet marketing and promotion, successively held positions of marketing director and vice president of distribution. <br>Entered blockchain industry in 2018, and he is good at promoting and publicizing the blockchain projects applied in the industry."
           },
           {
-            img: "/static/team/biwei.png",
+            img: "/page/static/team/biwei.png",
             name: "Dr. Wei Bi",
             position: "Special technical consultant",
             tips:
               "Dr. Wei Bi provides technical consultant support to Seele’s operating team.<br>Ph.D. in Visual Science from the University of London, Master in Computer Science from Oxford University, Deputy Secretary-General of China Blockchain Technology Innovation and Application Alliance.  He used to be a researcher at the University of London and a tutor for postgraduate PhD students. <br>Being himself the first inventor of 8 blockchain technology patents, he has been invited many times to participate in large international academic conferences, and his results have been published in top academic journals in New England. His articles and opinions have been reported by BBC, UK CHINESE TIMES, London Chinese Radio, and Complex UK Media."
           },
           {
-            img: "/static/team/Amos.png",
+            img: "/page/static/team/Amos.png",
             name: "Mr. Amos",
             position: "Special industry consultant",
             tips:
@@ -100,10 +100,10 @@ module.exports = {
     ]
   },
   img: {
-    banner: "static/en/banner_txt.png",
-    tit3: "static/en/tit_3.jpg",
-    video: "static/en/video.jpg",
-    fk: ["static/en/fk_1.jpg", "static/en/fk_2.jpg", "static/en/fk_3.jpg"]
+    banner: "/page/static/en/banner_txt.png",
+    tit3: "/page/static/en/tit_3.jpg",
+    video: "/page/static/en/video.jpg",
+    fk: ["/page/static/en/fk_1.jpg", "/page/static/en/fk_2.jpg", "/page/static/en/fk_3.jpg"]
   },
   history: [
     {

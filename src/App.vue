@@ -5,7 +5,7 @@
         <a href="javascript:;" class="logo"></a>
 
         <div class="menu-pc">
-          <router-link :to="lang == 'zh' ? '/' : '/en'">{{ $t("nav[0]") }}</router-link>
+          <router-link :to="lang == 'zh' ? 'index.html' : 'index_en.html'">{{ $t("nav[0]") }}</router-link>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->

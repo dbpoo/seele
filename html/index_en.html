@@ -26,25 +26,25 @@
         <div class="section">
           <a href="javascript:;" class="logo"></a>
           <div class="menu-pc">
-            <a href="#/en" class="router-link-exact-active router-link-active" aria-current="page">Home</a><a href="#/team" class="">Team</a
-            ><a href="https://seelen.pro/pdf/en/Seele_White_Paper_English_v3.1.pdf">Whitepaper</a><a href="#/news" class="">News</a
+            <a href="index_en.html" class="router-link-exact-active router-link-active" aria-current="page">Home</a><a href="/page/#/team" class="">Team</a
+            ><a href="https://seelen.pro/page/pdf/en/Seele_White_Paper_English_v3.1.pdf">Whitepaper</a><a href="/page/#/news" class="">News</a
             ><a href="https://seeleview.net/" target="_blank">Seeleview</a>
             <div class="menuLanguage">
               language
               <ul>
                 <li class="">
-                  中文
+                  <a href="index.html">中文</a>
                 </li>
                 <li class="active">
-                  English
+                  <a href="index_en.html">English</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="menu-toggle"></div>
           <div class="menu-mobile" style="display: none;">
-            <a href="#/en" class="router-link-exact-active router-link-active" aria-current="page">Home</a><a href="#/team" class="">Team</a
-            ><a href="https://seelen.pro/pdf/en/Seele_White_Paper_English_v3.1.pdf">Whitepaper</a><a href="#/news" class="">News</a
+            <a href="index_en.html" class="router-link-exact-active router-link-active" aria-current="page">Home</a><a href="/page/#/team" class="">Team</a
+            ><a href="https://seelen.pro/page/pdf/en/Seele_White_Paper_English_v3.1.pdf">Whitepaper</a><a href="/page/#/news" class="">News</a
             ><a href="https://seeleview.net/" target="_blank">Seeleview</a>
             <div class="tit">language</div>
             <a class=""> 中文 </a
@@ -57,13 +57,13 @@
       <div class="container">
         <div class="banner-container">
           <div data-wow-duration="3s" class="banner wow zoomInBg" style="visibility: visible; animation-duration: 3s;">
-            <img src="https://seelen.pro/static/en/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;" />
+            <img src="https://seelen.pro/page/static/en/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;" />
           </div>
         </div>
         <div class="col-1">
           <div class="section wow fadeInUp" style="visibility: hidden; animation-name: none;">
             <div class="con">
-              <div class="videobox"><img src="https://seelen.pro/static/en/video.jpg" alt="" srcset="" /></div>
+              <div class="videobox"><img src="https://seelen.pro/page/static/en/video.jpg" alt="" srcset="" /></div>
               <div class="videotxt">
                 <p>
                   Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with
@@ -83,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="news-list" id="news-list"></div>
+        <div class="news-list wow fadeInUp" id="news-list"></div>
         <div class="loadmore">
           <div class="ball-pulse" style="display:none;">
             <div></div>
@@ -115,6 +115,7 @@
     <script src="js/wow.min.js"></script>
     <script>
       $(function() {
+        sessionStorage.setItem("LANG", "en");
         new WOW().init();
         let isLoading = true;
         let page = 1;
@@ -139,11 +140,11 @@
               $(".ball-pulse").hide();
               let $elems = "";
               res.forEach(function(item, index) {
-                $elems += `<div class="item"><div class="text"><h3>${item.title.rendered}</h3><p>${
+                $elems += `<div class="item"><div class="text"><h3><a href="/page/#/detail/${item.id}">${item.title.rendered}</a></h3><p>${
                   item.excerpt.rendered
                 } […]</p><div class="infos"><div class="time">[${
                   item.date.split("T")[0]
-                }]</div><div class="more">more &gt;&gt;</div></div></div></div>`;
+                }]</div><div class="more"><a href="/page/#/detail/${item.id}">more &gt;&gt;</a></div></div></div></div>`;
               });
               $container.append($elems);
             },
