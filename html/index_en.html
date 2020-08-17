@@ -1,0 +1,173 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <meta
+      name="keywords"
+      content="Seele,SeeleN,Seele-N, Exchange Platform, Infrastructure Exchange Platform, Data Infrastructure Exchange Platform, Knowledge interconnection, value interconnection, Blockchain, Ethereum,Bitcoin,MTC,ETH,BTC,ICO"
+    />
+    <meta
+      name="description"
+      content='Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data Infrastructure Exchange Platform , constructed a complete knowledge chain, has spawned a large number of new applications, new interactive models.'
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Seele_Seele is now newly upgraded to Seele-N</title>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="https://hm.baidu.com/hm.js?e8671803cd927ebdd202b68699f5e90c"></script>
+  </head>
+  <body>
+    <div id="app" class="en">
+      <div class="header">
+        <div class="section">
+          <a href="javascript:;" class="logo"></a>
+          <div class="menu-pc">
+            <a href="#/en" class="router-link-exact-active router-link-active" aria-current="page">Home</a><a href="#/team" class="">Team</a
+            ><a href="https://seelen.pro/pdf/en/Seele_White_Paper_English_v3.1.pdf">Whitepaper</a><a href="#/news" class="">News</a
+            ><a href="https://seeleview.net/" target="_blank">Seeleview</a>
+            <div class="menuLanguage">
+              language
+              <ul>
+                <li class="">
+                  中文
+                </li>
+                <li class="active">
+                  English
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-toggle"></div>
+          <div class="menu-mobile" style="display: none;">
+            <a href="#/en" class="router-link-exact-active router-link-active" aria-current="page">Home</a><a href="#/team" class="">Team</a
+            ><a href="https://seelen.pro/pdf/en/Seele_White_Paper_English_v3.1.pdf">Whitepaper</a><a href="#/news" class="">News</a
+            ><a href="https://seeleview.net/" target="_blank">Seeleview</a>
+            <div class="tit">language</div>
+            <a class=""> 中文 </a
+            ><a class="active">
+              English
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="banner-container">
+          <div data-wow-duration="3s" class="banner wow zoomInBg" style="visibility: visible; animation-duration: 3s;">
+            <img src="https://seelen.pro/static/en/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;" />
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="section wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <div class="con">
+              <div class="videobox"><img src="https://seelen.pro/static/en/video.jpg" alt="" srcset="" /></div>
+              <div class="videotxt">
+                <p>
+                  Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with
+                  knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and
+                  use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data
+                  Infrastructure Exchange Platform ", constructed a complete knowledge chain, has spawned a large number of new applications, new
+                  interactive models.
+                </p>
+                <p>
+                  Our core goal is to solve the sharing, co-construction, and win-win of data infrastructure resources from the infrastructure level,
+                  and open up the channels for resource property exchange and value realization. The project develops a value exchange platform for
+                  global knowledge property circulation service and builds a financial infrastructure for data property trading platform. An open
+                  system of knowledge rights and interests is established with EIP (Executive IP) as the core, and a unified ecology of
+                  responsibility, power and profit in the process of globalization of new property is established.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-list" id="news-list"></div>
+        <div class="loadmore">
+          <div class="ball-pulse" style="display:none;">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <a href="javascript:;" class="loadmore-btn"></a>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="section">
+          <div class="footer-copyright">
+            Copyright © 2020 Seele Foundation
+          </div>
+          <div class="footer-email">
+            <span>Official Email： </span><span>contact@seelen.pro<br />business@seelen.pro</span>
+          </div>
+          <div class="footer-link">
+            <a href="https://medium.com/@seelen" target="_blank" class="fl-01"></a
+            ><a href="https://t.me/seelenseelen2020" target="_blank" class="fl-03"></a
+            ><a href="https://twitter.com/n_seele" target="_blank" class="fl-04"></a
+            ><a href="https://weibo.com/6561132287/profile?topnav=1&amp;wvr=6" target="_blank" class="fl-06"></a
+            ><a href="https://seeleview.net/" target="_blank" class="fl-07"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      $(function() {
+        new WOW().init();
+        let isLoading = true;
+        let page = 1;
+        let $container = $("#news-list");
+
+        $(".loadmore-btn").html("load more");
+        $(".loadmore-btn").on("click", function() {
+          if (isLoading) {
+            page++;
+            getCms(page);
+          }
+        });
+
+        function getCms(page) {
+          $(".loadmore-btn").hide();
+          $(".ball-pulse").show();
+          $.ajax({
+            url: "//api.lkbt.pro/wp-json/wp/v2/posts?categories=13&page=" + page,
+            type: "GET",
+            success: function(res) {
+              $(".loadmore-btn").show();
+              $(".ball-pulse").hide();
+              let $elems = "";
+              res.forEach(function(item, index) {
+                $elems += `<div class="item"><div class="text"><h3>${item.title.rendered}</h3><p>${
+                  item.excerpt.rendered
+                } […]</p><div class="infos"><div class="time">[${
+                  item.date.split("T")[0]
+                }]</div><div class="more">more &gt;&gt;</div></div></div></div>`;
+              });
+              $container.append($elems);
+            },
+            error: function(err) {
+              $(".loadmore-btn").show();
+              $(".ball-pulse").hide();
+              isLoading = false;
+              $(".loadmore-btn").addClass("is-over");
+              $(".loadmore-btn").html("no data!");
+            }
+          });
+        }
+
+        getCms(1);
+      });
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e8671803cd927ebdd202b68699f5e90c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
+</html>

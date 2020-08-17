@@ -210,7 +210,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../css/animate.less";
 .banner-container {
   margin: 0 auto;
