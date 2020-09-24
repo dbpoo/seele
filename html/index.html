@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
     <meta
       name="keywords"
-      content="Seele元一Seele,SeeleN,Seele-N,交换平台,资产价值交换平台,数据资产价值交换平台,知识互联,价值互联,可信交换,人工智能,大数据,智能合约"
+      content="Seele元一,Seele,SeeleN,Seele-N,Seele官网,交换平台,资产价值交换平台,数据资产价值交换平台,知识互联,价值互联,可信交换,人工智能,大数据,智能合约"
     />
     <meta
       name="description"
@@ -17,7 +17,7 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <title>Seele_Seele元一_品牌现已全新升级为Seele-N</title>
+    <title>Seele_Seele元一_SeeleN_品牌现已全新升级为Seele-N</title>
     <script src="https://hm.baidu.com/hm.js?e8671803cd927ebdd202b68699f5e90c"></script>
   </head>
   <body>
@@ -26,7 +26,8 @@
         <div class="section">
           <a href="javascript:;" class="logo"></a>
           <div class="menu-pc">
-            <a href="index.html" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="/page/#/team" class="">团队</a
+            <a href="index.html" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="https://seelen.pro/platform/index.html" class="" target="_blank">SeeleN平台专题</a
+            ><a href="/page/#/team" class="">团队</a
             ><a href="https://seelen.pro/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf">白皮书</a><a href="/page/#/news" class="">新闻</a
             ><a href="https://seeleview.net/" target="_blank">区块浏览器</a>
             <div class="menuLanguage">
@@ -43,7 +44,8 @@
           </div>
           <div class="menu-toggle"></div>
           <div class="menu-mobile" style="display: none;">
-            <a href="index.html" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="/page/#/team" class="">团队</a
+            <a href="index.html" aria-current="page" class="router-link-exact-active router-link-active">首页</a><a href="https://seelen.pro/platform/index.html" class="" target="_blank">SeeleN平台专题</a
+            ><a href="/page/#/team" class="">团队</a
             ><a href="https://seelen.pro/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf">白皮书</a><a href="/page/#/news" class="">新闻</a
             ><a href="https://seeleview.net/" target="_blank">区块浏览器</a>
             <div class="tit">语言</div>
@@ -57,7 +59,7 @@
       <div class="container">
         <div class="banner-container">
           <div data-wow-duration="3s" class="banner wow zoomInBg" style="visibility: visible; animation-duration: 3s;">
-            <img src="https://seelen.pro/page/static/zh/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;" />
+            <a  href="https://seelen.pro/platform/index.html"><img src="https://seelen.pro/page/static/zh/banner_txt.png" alt="" srcset="" class="wow fadeInUp" style="visibility: visible;"/></a>
           </div>
         </div>
         <div class="col-1">
@@ -112,6 +114,10 @@
         let isLoading = true;
         let page = 1;
         let $container = $("#news-list");
+
+        $(".menu-toggle").click(function(){
+          $(".menu-mobile").toggle();
+        });
 
         $(".loadmore-btn").html("加载更多");
         $(".loadmore-btn").on("click", function() {
