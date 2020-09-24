@@ -1,7 +1,19 @@
 module.exports = {
-  mateName: "Seele元一Seele,SeeleN,Seele-N,交换平台,资产价值交换平台,数据资产价值交换平台,知识互联,价值互联,可信交换,人工智能,大数据,智能合约",
-  mateContent: "Seele项目团队通过深入研究，以知识互联解决知识的结构、继承、传递等体系问题，以价值互联解决知识发布、传播、使用过程中的权益冲突。知识互联+价值互联，融合建立“产业数据基础资源交换平台”，构建完整的知识链条，催生大量新型应用、新型互动模式的涌现。",
-  nav: ["首页", "团队", "技术生态", "产业合作", "白皮书", "新闻", "区块浏览器"],
+  mateName:
+    "Seele元一Seele,SeeleN,Seele-N,交换平台,资产价值交换平台,数据资产价值交换平台,知识互联,价值互联,可信交换,人工智能,大数据,智能合约",
+  mateContent:
+    "Seele项目团队通过深入研究，以知识互联解决知识的结构、继承、传递等体系问题，以价值互联解决知识发布、传播、使用过程中的权益冲突。知识互联+价值互联，融合建立“产业数据基础资源交换平台”，构建完整的知识链条，催生大量新型应用、新型互动模式的涌现。",
+  nav: [
+    "首页",
+    "团队",
+    "技术生态",
+    "产业合作",
+    "白皮书",
+    "新闻",
+    "区块浏览器",
+    "SeeleN平台专题"
+  ],
+  platform: "http://seelen.pro/platform/index.html",
   whitePager: "/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
   language: "语言",
   news: {
@@ -94,7 +106,11 @@ module.exports = {
     banner: "/page/static/zh/banner_txt.png",
     tit3: "/page/static/zh/tit_3.jpg",
     video: "/page/static/zh/video.jpg",
-    fk: ["/page/static/zh/fk_1.jpg", "/page/static/zh/fk_2.jpg", "/page/static/zh/fk_3.jpg"]
+    fk: [
+      "/page/static/zh/fk_1.jpg",
+      "/page/static/zh/fk_2.jpg",
+      "/page/static/zh/fk_3.jpg"
+    ]
   },
   history: [
     {

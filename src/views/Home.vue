@@ -2,14 +2,16 @@
   <div class="container">
     <div class="banner-container">
       <div class="banner wow zoomInBg" data-wow-duration="3s">
-        <img :src="$t('img.banner')" alt="" srcset="" class="wow fadeInUp" />
+        <a :href="$t('platform')"
+          ><img :src="$t('img.banner')" alt="" srcset="" class="wow fadeInUp"
+        /></a>
       </div>
     </div>
     <div class="col-1">
       <div class="section wow fadeInUp">
         <div class="con">
           <div class="videobox">
-             <img :src="$t('img.video')" alt="" srcset="" />
+            <img :src="$t('img.video')" alt="" srcset="" />
             <!-- <video-player
               class="video-player vjs-custom-skin vjs-big-play-centered"
               ref="videoPlayer"
@@ -219,9 +221,13 @@ export default {
 .banner {
   height: 810px;
   background: url("../assets/banner.jpg") center 0 no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  a {
+    height: 810px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .col-1 {
@@ -398,6 +404,9 @@ export default {
   .banner {
     height: 260px;
     background-size: cover;
+    a {
+      height: 260px;
+    }
     img {
       width: 100%;
     }

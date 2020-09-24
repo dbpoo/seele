@@ -1,0 +1,298 @@
+.col-banner {
+  display: flex;
+  justify-content: center;
+}
+
+.col-banner img {
+  width: 100%;
+}
+
+.con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.con .con-img {
+  flex: 0 0 auto;
+}
+
+.con .con-txt {
+  font-size: 20px;
+  line-height: 2;
+}
+
+.con .con-txt p b {
+  font-weight: bold;
+  color: #44c2c7;
+}
+
+.con-line {
+  height: 4px;
+  background: url("../img/line.png") no-repeat center 0;
+  background-size: contain;
+}
+
+.col-1,
+.col-3 {
+  background: url("../img/rbg.png") repeat 0 0;
+}
+
+.col-4,
+.col-6 {
+  background: url("../img/rbg_blue.png") repeat 0 0;
+}
+
+.col-1 {
+  padding-bottom: 20px;
+}
+
+.col-1 .tit1 {
+  font-size: 40px;
+  color: #44c2c7;
+  padding: 100px 0 50px 0;
+  text-align: center;
+}
+
+.col-1 .tit2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+  border-left: 30px solid #44c2c7;
+  border-right: 30px solid #44c2c7;
+}
+
+.col-1 .con .con-img {
+  margin-left: 60px;
+}
+
+.col-2 .con {
+  padding: 60px 0;
+}
+
+.con-2 .cimg {
+  padding-bottom: 120px;
+}
+
+.col-2 .con .con-img {
+  margin-right: 120px;
+}
+
+.col-3 {
+  padding-top: 120px;
+}
+
+.col-3 .con-line {
+  margin: 100px 0;
+}
+
+.col-3 .con .con-img {
+  margin-left: 50px;
+}
+
+.col-3 .conul {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-bottom: 120px;
+}
+
+.col-3 .conul ul {
+  width: 370px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-3 .conul ul li.li2 {
+  padding-bottom: 10px;
+}
+
+.col-3 .conul ul li.li3 {
+  padding: 20px;
+  line-height: 2;
+}
+
+.col-3 .conul ul:hover {
+  background-color: #41b8bd;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.col-4 .tit {
+  font-size: 40px;
+  color: #fff;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.col-4 .con {
+  padding-bottom: 70px;
+}
+
+.col-4 .con .con-txt {
+  color: #fff;
+}
+
+.col-4 .con-1 .con-img {
+  margin-left: 60px;
+}
+
+.col-4 .con-2 .con-img {
+  margin-right: 20px;
+}
+
+.col-5 {
+  padding-top: 110px;
+}
+
+.col-5 .tit {
+  font-size: 40px;
+  color: #41b8bd;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.col-5 .con-line {
+  margin: 50px 0 100px 0;
+}
+
+.col-5 .conul {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-5 .conul ul {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.col-5 .conul ul li.li1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0 40px;
+}
+
+.col-5 .conul ul:hover {
+  color: #fff;
+  background-color: #41b8bd;
+  border-radius: 10px;
+}
+
+.col-6 {
+  padding: 90px 0;
+}
+
+.col-6 .con .con-txt {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .con {
+    flex-direction: column;
+  }
+  .cimg img {
+    width: 100%;
+    padding: 20px;
+  }
+  .con .con-txt {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  .con .con-img {
+    padding: 20px;
+  }
+  .con .con-img img {
+    width: 100%;
+  }
+  .col-1 .tit1 {
+    font-size: 24px;
+    padding: 30px 20px;
+  }
+  .col-1 .tit2 {
+    font-size: 18px;
+  }
+  .col-1 .con .con-img {
+    margin: 0;
+    padding: 20px;
+  }
+  .col-1 .con .con-img img {
+    width: 100%;
+  }
+  .col-2 .con .con-img {
+    margin: 0;
+    padding: 20px;
+  }
+  .col-2 .con .con-img img {
+    width: 100%;
+  }
+  .col-3 {
+    padding-top: 20px;
+  }
+  .col-3 .con-line {
+    margin: 20px 0;
+  }
+  .col-3 .con .con-img {
+    margin: 0;
+    padding: 20px;
+  }
+  .col-3 .con .con-img img {
+    width: 100%;
+  }
+  .col-3 .conul {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .col-3 .conul ul {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+  .col-4 .tit {
+    font-size: 24px;
+    padding: 30px 20px;
+  }
+  .col-4 .con {
+    padding-bottom: 20px;
+  }
+  .col-4 .con-1 .con-img,
+  .col-4 .con-2 .con-img {
+    margin: 0;
+    padding: 20px;
+  }
+  .col-4 .con-1 .con-img img,
+  .col-4 .con-2 .con-img img {
+    width: 100%;
+  }
+  .col-5 {
+    padding-top: 20px;
+  }
+  .col-5 .tit {
+    font-size: 24px;
+    padding: 30px 20px;
+  }
+  .col-5 .con-line {
+    margin: 20px 0;
+  }
+  .col-5 .conul ul {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  .col-5 .conul ul li.li1 {
+    margin-bottom: 20px;
+  }
+  .col-6 {
+    padding: 20px 0;
+  }
+  .col-6 .con .con-txt {
+    font-size: 18px;
+  }
+}

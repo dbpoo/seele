@@ -1,6 +1,8 @@
 module.exports = {
-  mateName: "Seele,SeeleN,Seele-N, Exchange Platform, Infrastructure Exchange Platform, Data Infrastructure Exchange Platform, Knowledge interconnection, value interconnection, Blockchain, Ethereum,Bitcoin,MTC,ETH,BTC,ICO",
-  mateContent: 'Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data Infrastructure Exchange Platform , constructed a complete knowledge chain, has spawned a large number of new applications, new interactive models.',
+  mateName:
+    "Seele,SeeleN,Seele-N, Exchange Platform, Infrastructure Exchange Platform, Data Infrastructure Exchange Platform, Knowledge interconnection, value interconnection, Blockchain, Ethereum,Bitcoin,MTC,ETH,BTC,ICO",
+  mateContent:
+    'Through in-depth research, Seele project team solves the system problems of knowledge structure, inheritance and transmission with knowledge interconnection, and solves the conflict of rights and interests in the process of knowledge release, dissemination and use with value interconnection. Knowledge interconnection + value interconnection, together established the " Industrial Data Infrastructure Exchange Platform , constructed a complete knowledge chain, has spawned a large number of new applications, new interactive models.',
   nav: [
     "Home",
     "Team",
@@ -8,8 +10,10 @@ module.exports = {
     "Industrial Cooperation",
     "Whitepaper",
     "News",
-    "Seeleview"
+    "Seeleview",
+    "Special Page of SeeleN Platform"
   ],
+  platform: "http://seelen.pro/platform/index_en.html",
   whitePager: "/page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
   language: "language",
   news: {
@@ -56,7 +60,8 @@ module.exports = {
           {
             img: "/page/static/team/jeff.png",
             name: "Dr. Jeff Ho",
-            position: "Transformation and upgrading advisor and chief economist",
+            position:
+              "Transformation and upgrading advisor and chief economist",
             tips:
               "Dr. Jeff Ho is guiding Seele's transformation and upgrading, strategic planning and industrial integration.<br>He graduated from the Economics Department of Columbia University in 1985. He studied with Nobel Prize winner Robert Solo before joining Morgan Stanley for many years. <br>He obtained a Ph.D. in Finance from the University of Southern California in Los Angeles in 1993, and then joined the well-known credit rating agency Standard & Poor's for many years. <br>In October 1998, he was assigned to Singapore as the regional head of the 'sovereign rating' in the Asia-Pacific region. <br>In 2006, he established Singapore Shouneng Investment Co., Ltd. with a partner, specializing in the financing of stocks, bonds, futures and real estate securitization projects. <br>Since 2008, he has served as the managing director of Singapore Shouneng Co., Ltd. and Malaysia Shouneng Trading Co., Ltd."
           },
@@ -103,7 +108,11 @@ module.exports = {
     banner: "/page/static/en/banner_txt.png",
     tit3: "/page/static/en/tit_3.jpg",
     video: "/page/static/en/video.jpg",
-    fk: ["/page/static/en/fk_1.jpg", "/page/static/en/fk_2.jpg", "/page/static/en/fk_3.jpg"]
+    fk: [
+      "/page/static/en/fk_1.jpg",
+      "/page/static/en/fk_2.jpg",
+      "/page/static/en/fk_3.jpg"
+    ]
   },
   history: [
     {
