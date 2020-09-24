@@ -2,9 +2,7 @@
   <div class="container">
     <div class="banner-container">
       <div class="banner wow zoomInBg" data-wow-duration="3s">
-        <a :href="$t('platform')"
-          ><img :src="$t('img.banner')" alt="" srcset="" class="wow fadeInUp"
-        /></a>
+        <a :href="$t('platform')"></a>
       </div>
     </div>
     <div class="col-1">

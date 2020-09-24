@@ -2,10 +2,15 @@
   <div id="app" :class="lang">
     <div class="header">
       <div class="section">
-        <a :href="lang == 'zh' ? '/index.html' : '/index_en.html'" class="logo"></a>
+        <a
+          :href="lang == 'zh' ? '/index.html' : '/index_en.html'"
+          class="logo"
+        ></a>
 
         <div class="menu-pc">
-          <router-link :to="lang == 'zh' ? '/' : '/en'">{{ $t("nav[0]") }}</router-link>
+          <router-link :to="lang == 'zh' ? '/' : '/en'">{{
+            $t("nav[0]")
+          }}</router-link>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
@@ -40,7 +45,10 @@
           @click="showMenu = !showMenu"
         ></div>
         <div class="menu-mobile" v-show="showMenu">
-          <router-link :to="lang == 'zh' ? '/' : '/en'">{{ $t("nav[0]") }}</router-link>
+          <router-link :to="lang == 'zh' ? '/' : '/en'">{{
+            $t("nav[0]")
+          }}</router-link>
+          <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
@@ -72,7 +80,8 @@
           Copyright © 2020 Seele Foundation
         </div>
         <div class="footer-email">
-          <span>Official Email： </span><span>contact@seelen.pro<br>business@seelen.pro</span>
+          <span>Official Email： </span
+          ><span>contact@seelen.pro<br />business@seelen.pro</span>
         </div>
         <div class="footer-link">
           <a
@@ -306,7 +315,7 @@ body {
     color: #007082;
     display: flex;
     justify-content: center;
-    span{
+    span {
       display: inline-block;
       text-align: left;
     }
