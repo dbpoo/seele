@@ -14,6 +14,7 @@ module.exports = {
     "Special Page of SeeleN Platform"
   ],
   platform: "http://seelen.pro/platform/index_en.html",
+  platformimg: "https://seelen.pro/platform/img/en/banner.jpg",
   whitePager: "/page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
   language: "language",
   news: {
