@@ -44,6 +44,7 @@ export default {
           this.newsCon = res.data.content.rendered;
           this.newsDate = this._filterTime(res.data.date);
           this.isLoading = false;
+          document.title = res.data.title.rendered;
         });
     },
     _filterTime(t) {
