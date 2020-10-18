@@ -107,6 +107,7 @@
             target="_blank"
           ></a>
           <a href="https://seeleview.net/" class="fl-07" target="_blank"></a>
+          <a href="https://h5.huobichat.com/sp/#/group?g=bn0x5hk6dd" class="fl-08" target="_blank"></a>
         </div>
       </div>
     </div>
@@ -352,6 +353,9 @@ body {
     }
     a.fl-07 {
       background: url("./assets/fl_07.png") 0 0 no-repeat;
+    }
+    a.fl-08 {
+      background: url("./assets/fl_08.png") 0 0 no-repeat;
     }
   }
 }
