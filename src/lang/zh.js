@@ -14,6 +14,7 @@ module.exports = {
     "SeeleN平台专题"
   ],
   platform: "http://seelen.pro/platform/index.html",
+  platformimg: "https://seelen.pro/platform/img/zh/banner.jpg",
   whitePager: "/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
   language: "语言",
   news: {

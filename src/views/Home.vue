@@ -2,7 +2,7 @@
   <div class="container">
     <div class="banner-container">
       <div class="banner wow zoomInBg" data-wow-duration="3s">
-        <a :href="$t('platform')"></a>
+        <a :href="$t('platform')"><img :src="$t('platformimg')" alt=""></a>
       </div>
     </div>
     <div class="col-1">
@@ -217,14 +217,12 @@ export default {
   overflow: hidden;
 }
 .banner {
-  height: 810px;
-  background: url("../assets/banner.jpg") center 0 no-repeat;
   a {
-    height: 810px;
+    width: 100%;
     display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -399,16 +397,6 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
-  .banner {
-    height: 260px;
-    background-size: cover;
-    a {
-      height: 260px;
-    }
-    img {
-      width: 100%;
-    }
-  }
   .col-1 {
     height: auto;
     padding: 0;
