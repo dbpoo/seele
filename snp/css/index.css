@@ -20,8 +20,9 @@
   margin-bottom: 50px;
 }
 
-.cimg img {
-  width: 100%;
+.cimg {
+  display: flex;
+  justify-content: center;
 }
 
 .con1,
@@ -31,22 +32,25 @@
   align-items: center;
 }
 
-.con1 .con-img,.con1 .con-pic {
+.con1 .con-img,
+.con1 .con-pic {
   flex: 0 0 auto;
   margin-right: 100px;
 }
 
-.con2 .con-img,.con2 .con-pic {
+.con2 .con-img,
+.con2 .con-pic {
   flex: 0 0 auto;
   margin-left: 100px;
 }
 
-.con-img img,.con-pic img {
+.con-img img {
   border-radius: 50px;
+  box-shadow: 0 0 20px #ccc;
 }
 
 .con-img img:hover {
-  box-shadow: 0 0 20px #ccc;
+  background: url("../img/rbg.png") 0 0 repeat;
 }
 
 .con-txt {
@@ -148,15 +152,18 @@
     font-size: 18px;
     padding: 0 20px;
   }
-  .con1 .con-img,.con1 .con-pic {
+  .con1 .con-img,
+  .con1 .con-pic {
     padding: 20px;
     margin: 0;
   }
-  .con2 .con-img,.con2 .con-pic {
+  .con2 .con-img,
+  .con2 .con-pic {
     padding: 20px;
     margin: 0;
   }
-  .con-img img,.con-pic img {
+  .con-img img,
+  .con-pic img {
     width: 100%;
   }
   .tit1 {
@@ -173,7 +180,7 @@
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .con-line {
     margin: 0;
   }
