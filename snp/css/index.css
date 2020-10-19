@@ -149,8 +149,11 @@
     padding: 20px;
   }
   .con-txt {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 20px;
+  }
+  .con-txt h2 {
+    font-size: 20px;
   }
   .con1 .con-img,
   .con1 .con-pic {
@@ -167,11 +170,11 @@
     width: 100%;
   }
   .tit1 {
-    font-size: 24px;
+    font-size: 20px;
     padding: 20px;
   }
   .tit2 {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 20px;
     margin-bottom: 0;
   }
@@ -193,6 +196,12 @@
   }
   .col-3 .info {
     padding: 20px;
+  }
+  .col-3 .info p{
+    font-size: 16px;
+  }
+  .col-3 .info h2 {
+    font-size: 20px;
   }
   .col-5 {
     padding-bottom: 30px;
