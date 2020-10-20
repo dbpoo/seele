@@ -17,6 +17,7 @@
     <link rel="icon" href="favicon.ico" />
     <title>Seele_Seele is now newly upgraded to Seele-N</title>
     <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
     <link href="css/index.css" rel="stylesheet" />
     <script src="https://hm.baidu.com/hm.js?e8671803cd927ebdd202b68699f5e90c"></script>
   </head>
@@ -58,10 +59,30 @@
       </div>
       <div class="container">
         <div class="banner-container">
-          <div data-wow-duration="3s" class="banner wow zoomInBg" style="visibility: visible; animation-duration: 3s;">
-            <a href="https://seelen.pro/platform/index.html">
-              <img src="https://seelen.pro/platform/img/en/banner.jpg" alt="">
-            </a>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="https://seelen.pro/snp/index_en.html">
+                  <img
+                    src="https://seelen.pro/snp/img/en/banner.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://seelen.pro/platform/index_en.html">
+                  <img
+                    src="https://seelen.pro/platform/img/en/banner.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
           </div>
         </div>
         <div class="col-1">
@@ -117,8 +138,18 @@
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script>
       $(function() {
+        let swiper = new Swiper(".swiper-container", {
+          pagination: ".swiper-pagination",
+          paginationClickable: true,
+          nextButton: ".swiper-button-next",
+          prevButton: ".swiper-button-prev",
+          loop: true,
+          autoplay: 2000,
+          autoHeight: true
+        });
         sessionStorage.setItem("LANG", "en");
         new WOW().init();
         let isLoading = true;
