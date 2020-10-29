@@ -11,10 +11,13 @@ module.exports = {
     "白皮书",
     "新闻",
     "区块浏览器",
-    "SeeleN平台专题"
+    "SeeleN平台专题",
+    "SNP专题"
   ],
   platform: "http://seelen.pro/platform/index.html",
   platformimg: "https://seelen.pro/platform/img/zh/banner.jpg",
+  index: "https://seelen.pro/",
+  snp: "https://seelen.pro/snp/index.html",
   whitePager: "/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
   language: "语言",
   news: {
