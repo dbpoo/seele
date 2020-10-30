@@ -47,8 +47,7 @@
 }
 
 .cimg {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .con1,
@@ -172,6 +171,7 @@
   }
   .cimg img {
     width: 100%;
+    height: auto;
     padding: 20px;
   }
   .con-txt {
