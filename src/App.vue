@@ -8,9 +8,9 @@
         ></a>
 
         <div class="menu-pc">
-          <router-link :to="lang == 'zh' ? '/' : '/en'">{{
+          <a :href="lang == 'zh' ? '/index.html' : '/index_en.html'">{{
             $t("nav[0]")
-          }}</router-link>
+          }}</a>
           <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
