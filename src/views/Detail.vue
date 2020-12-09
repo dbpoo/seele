@@ -142,7 +142,6 @@ export default {
         line-height: 150%;
       }
     }
-    
   }
 }
 </style>
