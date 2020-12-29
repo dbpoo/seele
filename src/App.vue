@@ -13,6 +13,7 @@
           }}</a>
           <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
+          <a href="https://nervledger.fi/">NervLedger</a>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
