@@ -19,7 +19,7 @@
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <a href="https://seeleview.net/" target="_blank">{{
+          <a href="https://etherscan.io/token/0xB1e93236ab6073fdAC58adA5564897177D4bcC43/" target="_blank">{{
             $t("nav[6]")
           }}</a>
           <div class="menuLanguage">
