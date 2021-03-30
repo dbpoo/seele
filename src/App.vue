@@ -19,7 +19,7 @@
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <a href="https://etherscan.io/token/0xB1e93236ab6073fdAC58adA5564897177D4bcC43/" target="_blank">{{
+          <a href="https://testnet.seeleview.net/" target="_blank">{{
             $t("nav[6]")
           }}</a>
           <div class="menuLanguage">
@@ -107,7 +107,7 @@
             class="fl-06"
             target="_blank"
           ></a>
-          <a href="https://etherscan.io/token/0xB1e93236ab6073fdAC58adA5564897177D4bcC43" class="fl-07" target="_blank"></a>
+          <a href="https://testnet.seeleview.net/" class="fl-07" target="_blank"></a>
           <a href="https://h5.huobichat.com/sp/#/group?g=bn0x5hk6dd" class="fl-08" target="_blank"></a>
         </div>
       </div>
