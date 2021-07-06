@@ -62,14 +62,6 @@ module.exports = {
         tit: "Core",
         arr: [
           {
-            img: "/page/static/team/jeff.png",
-            name: "Dr. Jeff Ho",
-            position:
-              "Transformation and upgrading advisor and chief economist",
-            tips:
-              "Dr. Jeff Ho is guiding Seele's transformation and upgrading, strategic planning and industrial integration.<br>He graduated from the Economics Department of Columbia University in 1985. He studied with Nobel Prize winner Robert Solo before joining Morgan Stanley for many years. <br>He obtained a Ph.D. in Finance from the University of Southern California in Los Angeles in 1993, and then joined the well-known credit rating agency Standard & Poor's for many years. <br>In October 1998, he was assigned to Singapore as the regional head of the 'sovereign rating' in the Asia-Pacific region. <br>In 2006, he established Singapore Shouneng Investment Co., Ltd. with a partner, specializing in the financing of stocks, bonds, futures and real estate securitization projects. <br>Since 2008, he has served as the managing director of Singapore Shouneng Co., Ltd. and Malaysia Shouneng Trading Co., Ltd."
-          },
-          {
             img: "/page/static/team/peng.png",
             name: "Mr. Peng Wang",
             position: "CMO",
