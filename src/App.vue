@@ -13,12 +13,13 @@
           }}</a>
           <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
+          <a href="https://nervledger.fi/">NervLedger</a>
           <router-link to="/team">{{ $t("nav[1]") }}</router-link>
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <a href="https://seeleview.net/" target="_blank">{{
+          <a href="https://testnet.seeleview.net/" target="_blank">{{
             $t("nav[6]")
           }}</a>
           <div class="menuLanguage">
@@ -106,7 +107,7 @@
             class="fl-06"
             target="_blank"
           ></a>
-          <a href="https://seeleview.net/" class="fl-07" target="_blank"></a>
+          <a href="https://testnet.seeleview.net/" class="fl-07" target="_blank"></a>
           <a href="https://h5.huobichat.com/sp/#/group?g=bn0x5hk6dd" class="fl-08" target="_blank"></a>
         </div>
       </div>

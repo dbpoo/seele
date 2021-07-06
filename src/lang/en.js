@@ -11,7 +11,7 @@ module.exports = {
     "Whitepaper",
     "News",
     "Seeleview",
-    "Special Page of SeeleN Platform",
+    "SeeleN",
     "SNP"
   ],
   platform: "http://seelen.pro/platform/index_en.html",
