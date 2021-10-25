@@ -44,7 +44,10 @@ export default {
           this.newsCon = res.data.content.rendered;
           this.newsDate = this._filterTime(res.data.date);
           this.isLoading = false;
+          let substrStr = res.data.content.rendered ? res.data.content.rendered.substr(0,100) : "";
           document.title = res.data.title.rendered;
+          document.querySelector('meta[name="ogtitle"]').setAttribute("content", res.data.title.rendered);
+          document.querySelector('meta[name="ogdescription"]').setAttribute("content", substrStr);
         });
     },
     _filterTime(t) {
