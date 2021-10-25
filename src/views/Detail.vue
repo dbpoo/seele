@@ -6,7 +6,9 @@
     <div class="detail" v-if="newsCon">
       <div class="section">
         <div class="infos">
-          <div class="location">{{ $t("news.tit") }} &gt; <span>{{ $t("news.tit2") }}</span></div>
+          <div class="location">
+            {{ $t("news.tit") }} &gt; <span>{{ $t("news.tit2") }}</span>
+          </div>
           <div class="time">{{ newsDate }}</div>
         </div>
         <div class="title">{{ newsTit }}</div>
@@ -32,31 +34,33 @@ export default {
       newsTit: "",
       newsCon: "",
       newsDate: "",
-      isLoading: true
+      isLoading: true,
     };
   },
   methods: {
     getCms() {
-      this.$aixos
-        .get("//api.lkbt.pro/wp-json/wp/v2/posts/" + this.id)
-        .then(res => {
-          this.newsTit = res.data.title.rendered;
-          this.newsCon = res.data.content.rendered;
-          this.newsDate = this._filterTime(res.data.date);
-          this.isLoading = false;
-          let substrStr = res.data.content.rendered ? res.data.content.rendered.substr(0,100) : "";
-          document.title = res.data.title.rendered;
-          document.querySelector('meta[name="ogtitle"]').setAttribute("content", res.data.title.rendered);
-          document.querySelector('meta[name="ogdescription"]').setAttribute("content", substrStr);
-        });
+      this.$aixos.get("//api.lkbt.pro/wp-json/wp/v2/posts/" + this.id).then((res) => {
+        this.newsTit = res.data.title.rendered;
+        this.newsCon = res.data.content.rendered;
+        this.newsDate = this._filterTime(res.data.date);
+        this.isLoading = false;
+        let excerpt = res.data.excerpt.rendered.slice(3, -15);
+        document.title = res.data.title.rendered;
+        document
+          .querySelector('meta[property="og:title"]')
+          .setAttribute("content", res.data.title.rendered);
+        document
+          .querySelector('meta[property="og:description"]')
+          .setAttribute("content", excerpt);
+      });
     },
     _filterTime(t) {
       return t.split("T")[0];
-    }
+    },
   },
   mounted() {
     this.getCms();
-  }
+  },
 };
 </script>
 
@@ -121,7 +125,7 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
-   .banner-news {
+  .banner-news {
     height: 150px;
     span {
       font-size: 40px;
