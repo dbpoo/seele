@@ -12,13 +12,15 @@ module.exports = {
     "新闻",
     "区块浏览器",
     "SeeleN平台专题",
-    "SNP专题"
+    "SNP专题",
+    "SeeleN主网"
   ],
   platform: "http://seelen.pro/platform/index.html",
   platformimg: "https://seelen.pro/platform/img/zh/banner.jpg",
   index: "https://seelen.pro/",
   snp: "https://seelen.pro/snp/index.html",
   whitePager: "/page/pdf/zh/Seele_White_Paper_CN_v3.1.pdf",
+  SeeleNM: "http://106.75.85.9/ ",
   language: "语言",
   news: {
     tit: "新闻动态",

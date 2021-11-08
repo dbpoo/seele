@@ -12,8 +12,9 @@
             $t("nav[0]")
           }}</a>
           <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
+          <a :href="$t('seeleNM')">{{ $t("nav[9]") }}</a>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
-          <a href="https://nervledger.fi/">NervLedger</a>
+          <a href="https://nervledger.fi/" v-if="lang == 'zh'">NervLedger</a>
           <!-- <router-link to="/team">{{ $t("nav[1]") }}</router-link> -->
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
@@ -48,6 +49,7 @@
         ></div>
         <div class="menu-mobile" v-show="showMenu">
           <a :href="$t('index')">{{ $t("nav[0]") }}</a>
+          <a :href="$t('seeleNM')">{{ $t("nav[9]") }}</a>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
           <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
           <!-- <router-link to="/team">{{ $t("nav[1]") }}</router-link> -->
@@ -85,6 +87,11 @@
           ><span>contact@seelen.pro<br />business@seelen.pro</span>
         </div>
         <div class="footer-link">
+          <a
+            href="http://106.75.85.9/"
+            class="fl-00"
+            target="_blank"
+          ></a>
           <a
             href="https://medium.com/@seelen"
             class="fl-01"
@@ -333,6 +340,9 @@ body {
       height: 43px;
       display: block;
       margin: 0 18px;
+    }
+    a.fl-00 {
+      background: url("./assets/fl_00.png") 0 0 no-repeat;
     }
     a.fl-01 {
       background: url("./assets/fl_01.png") 0 0 no-repeat;

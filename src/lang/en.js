@@ -12,13 +12,15 @@ module.exports = {
     "News",
     "Seeleview",
     "SeeleN",
-    "SNP"
+    "SNP",
+    "SeeleN Mainnet"
   ],
   platform: "http://seelen.pro/platform/index_en.html",
   platformimg: "https://seelen.pro/platform/img/en/banner.jpg",
   index: "https://seelen.pro/index_en.html",
   snp: "https://seelen.pro/snp/index_en.html",
   whitePager: "/page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
+  seeleNM: "http://106.75.85.9/ ",
   language: "language",
   news: {
     tit: "News",
