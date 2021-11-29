@@ -11,16 +11,16 @@
           <a :href="lang == 'zh' ? '/index.html' : '/index_en.html'">{{
             $t("nav[0]")
           }}</a>
-          <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
           <a :href="$t('seeleNM')">{{ $t("nav[9]") }}</a>
+          <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
           <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
-          <a href="https://nervledger.fi/" v-if="lang == 'zh'">NervLedger</a>
+          <a href="https://app.nervledger.fi/" v-if="lang == 'zh'">NervLedger</a>
           <!-- <router-link to="/team">{{ $t("nav[1]") }}</router-link> -->
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
           <a :href="$t('whitePager')">{{ $t("nav[4]") }}</a>
           <router-link to="/news">{{ $t("nav[5]") }}</router-link>
-          <a href="https://testnet.seeleview.net/" target="_blank">{{
+          <a href="https://seeleview.net/" target="_blank">{{
             $t("nav[6]")
           }}</a>
           <div class="menuLanguage">
@@ -50,8 +50,9 @@
         <div class="menu-mobile" v-show="showMenu">
           <a :href="$t('index')">{{ $t("nav[0]") }}</a>
           <a :href="$t('seeleNM')">{{ $t("nav[9]") }}</a>
-          <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
           <a :href="$t('snp')">{{ $t("nav[8]") }}</a>
+          <a :href="$t('platform')">{{ $t("nav[7]") }}</a>
+          <a href="https://app.nervledger.fi/" v-if="lang == 'zh'">NervLedger</a>
           <!-- <router-link to="/team">{{ $t("nav[1]") }}</router-link> -->
           <!-- <a href="javascript:;">{{ $t("nav[2]") }}</a>
           <a href="javascript:;">{{ $t("nav[3]") }}</a> -->
@@ -88,7 +89,7 @@
         </div>
         <div class="footer-link">
           <a
-            href="http://106.75.85.9/"
+            href="http://launchpad.seelen.pro"
             class="fl-00"
             target="_blank"
           ></a>
@@ -114,7 +115,7 @@
             class="fl-06"
             target="_blank"
           ></a>
-          <a href="https://testnet.seeleview.net/" class="fl-07" target="_blank"></a>
+          <a href="https://seeleview.net/" class="fl-07" target="_blank"></a>
           <a href="https://h5.huobichat.com/sp/#/group?g=bn0x5hk6dd" class="fl-08" target="_blank"></a>
         </div>
       </div>

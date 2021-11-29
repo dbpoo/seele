@@ -20,7 +20,7 @@ module.exports = {
   index: "https://seelen.pro/index_en.html",
   snp: "https://seelen.pro/snp/index_en.html",
   whitePager: "/page/pdf/en/Seele_White_Paper_English_v3.1.pdf",
-  seeleNM: "http://106.75.85.9/ ",
+  seeleNM: "http://launchpad.seelen.pro",
   language: "language",
   news: {
     tit: "News",
